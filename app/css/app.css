@@ -1,1 +1,63 @@
 /* app css stylesheet */
+
+.fm-intro-bkg {
+  background-image: url(../img/intro_background.jpg);
+  opacity: 0.4;
+  height: 705px;
+}
+
+
+.fm-deliver-to {
+  width: 400px;
+}
+
+
+.fm-filter {
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+
+  background-color: grey;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.fm-filter form {
+  background-color: #fff;
+
+  margin-left: -10px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding: 5px 10px 10px;
+}
+
+
+.fm-restaurant-list {
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+
+  background-color: grey;
+  margin-bottom: 10px;
+}
+
+.fm-restaurant-list > * {
+  padding-left: 10px;
+}
+
+.fm-restaurant-list table {
+  background-color: #fff;
+  margin-bottom: 0px;
+}

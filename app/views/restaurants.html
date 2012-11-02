@@ -1,0 +1,81 @@
+<div class="breadcrumb fm-deliver-to">
+  Deliver to: {{userInfo.address}}
+  <a href="#/user-info" class="pull-right">Change</a>
+</div>
+
+<div class="row-fluid">
+
+  <div class="span3 fm-filter">
+    <h4>Filter Restaurants</h4>
+
+    <form>
+
+      <h5>Deliver</h5>
+
+      <select class="span8">
+        <option>Today</option>
+        <option>Tomorrow</option>
+      </select>
+
+
+      <h5>Cousine</h5>
+
+      <label class="checkbox"><input type="checkbox"> African</label>
+      <label class="checkbox"><input type="checkbox"> American</label>
+      <label class="checkbox"><input type="checkbox"> Barbecue</label>
+      <label class="checkbox"><input type="checkbox"> Chinese</label>
+      <label class="checkbox"><input type="checkbox"> Czech/Slovak</label>
+      <label class="checkbox"><input type="checkbox"> German</label>
+      <label class="checkbox"><input type="checkbox"> Japanese</label>
+
+
+      <h5>Price</h5>
+
+      <label class="checkbox"><input type="checkbox"> $</label>
+      <label class="checkbox"><input type="checkbox"> $$</label>
+      <label class="checkbox"><input type="checkbox"> $$$</label>
+      <label class="checkbox"><input type="checkbox"> $$$$</label>
+      <label class="checkbox"><input type="checkbox"> $$$$$</label>
+
+
+      <h5>Rating</h5>
+
+      <label class="checkbox"><input type="checkbox"> &#9733;</label>
+      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;</label>
+      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;</label>
+      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;&#9733;</label>
+      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;&#9733;&#9733;</label>
+
+    </form>
+  </div>
+
+  <div class="span9 fm-restaurant-list">
+    <h4>
+      <ng-pluralize count="restaurants.length"
+                      when="{'0': 'Nobody restaurants found. :-(',
+                     'one': '1 restaurant found!',
+                     'other': '{} restaurants found!'}">
+      </ng-pluralize>
+    </h4>
+
+    <table class="table table-hover">
+      <tr>
+        <th>Restaurant</th>
+        <th></th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Hours</th>
+      </tr>
+      <tr ng-repeat="restaurant in restaurants">
+        <td><img ng-src="img/restaurants/{{restaurant.id}}.png"></td>
+        <td>
+          <b><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></b>
+          <div>{{restaurant.description}}</div>
+        </td>
+        <td>{{restaurant.price | dollars}}</td>
+        <td>{{restaurant.rating | stars}}</td>
+        <td>{{restaurant.open}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

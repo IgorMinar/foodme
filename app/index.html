@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="foodMeApp">
 <head>
   <meta charset="utf-8">
   <title>FoodMe</title>
@@ -8,11 +8,54 @@
 </head>
 <body>
 
+  <div class="container">
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#/">FoodMe</a>
+        <ul class="nav">
+          <li class="active"><a href="#/">Home</a></li>
+          <li><a href="#/how-it-works">How it works</a></li>
+          <li><a href="#/who-we-are">Who we are</a></li>
+        </ul>
+
+        <ul class="nav pull-right">
+          <li><a href="#">Help</a></li>
+          <li class="divider-vertical"></li>
+          <li><a href="#">Login</a></li>
+
+          <!-- TODO: remove - we likely don't need a drop down
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          -->
+
+        </ul>
+      </div>
+    </div>
+
+
+    <ng-view></ng-view>
+
+  </div>
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
   -->
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/controllers/IntroController.js"></script>
+  <script src="js/controllers/RestaurantsController.js"></script>
+  <script src="js/services/userInfo.js"></script>
+  <script src="js/filters/dollars.js"></script>
+  <script src="js/filters/stars.js"></script>
 </body>
 </html>
