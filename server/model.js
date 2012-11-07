@@ -25,7 +25,7 @@ var parseDays = function(str) {
 
 var Restaurant = function(data) {
   // defaults
-  this.days = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  this.days = [1, 2, 3, 4, 5, 6];
   this.price = 0;
   this.rating = 0;
 
@@ -62,7 +62,8 @@ Restaurant.fromArray = function(data) {
     days: parseDays(data[5]),
     price: parseInt(data[6], 10),
     rating: parseInt(data[7], 10),
-    location: data[8]
+    location: data[8],
+    description: data[9]
   });
 };
 
