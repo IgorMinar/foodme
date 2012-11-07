@@ -1,7 +1,6 @@
 'use strict';
 
-foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, $resource) {
-  var Restaurant = $resource('/api/restaurant/:id', {id: '@id'});
+foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, Restaurant) {
 
   if (!userInfo.address) {
     $location.url('/user-info');
