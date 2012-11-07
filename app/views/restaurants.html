@@ -18,6 +18,16 @@
       </select>
 
 
+      <h5>Rating</h5>
+
+      <fm-rating symbol="&#9733;" max="5" ng-model="$parent.filter.rating"></fm-rating>
+
+
+      <h5>Price</h5>
+
+      <fm-rating symbol="$" max="5" ng-model="$parent.filter.price"></fm-rating>
+
+
       <h5>Cuisine</h5>
 
       <div fm-checkbox-list ng-model="filter.cuisine">
@@ -35,21 +45,6 @@
         <label class="checkbox"><input type="checkbox" value="thai"> Thai</label>
         <label class="checkbox"><input type="checkbox" value="vegetarian"> Vegetarian</label>
       </div>
-
-
-      <h5>Price</h5>
-
-      <select ng-model="filter.price" ng-options="i for i in [null, 1, 2, 3, 4, 5]">
-        <option>{{i}}</option>
-      </select>
-
-
-      <h5>Rating</h5>
-
-      <select ng-model="filter.rating" ng-options="i for i in [null, 1, 2, 3, 4, 5]">
-        <option>{{i}}</option>
-      </select>
-
     </form>
   </div>
 
