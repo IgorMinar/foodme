@@ -6,6 +6,22 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
     $location.url('/user-info');
   }
 
+  $scope.CUISINE_OPTIONS = {
+    african: 'African',
+    american: 'American',
+    barbecue: 'Barbecue',
+    cafe: 'Cafe',
+    chinese: 'Chinese',
+    'czech/slovak': 'Czech / Slovak',
+    german: 'German',
+    indian: 'Indian',
+    japanese: 'Japanese',
+    mexican: 'Mexican',
+    pizza: 'Pizza',
+    thai: 'Thai',
+    vegetarian: 'Vegetarian'
+  };
+
   $scope.userInfo = userInfo;
 
   var filter = $scope.filter = {

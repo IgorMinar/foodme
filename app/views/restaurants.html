@@ -31,19 +31,8 @@
       <h5>Cuisine</h5> <a ng-click="filter.cuisine = []">clear</a>
 
       <div fm-checkbox-list ng-model="filter.cuisine">
-        <label class="checkbox"><input type="checkbox" value="african"> American</label>
-        <label class="checkbox"><input type="checkbox" value="american"> American</label>
-        <label class="checkbox"><input type="checkbox" value="barbecue"> Barbecue</label>
-        <label class="checkbox"><input type="checkbox" value="cafe"> Cafe</label>
-        <label class="checkbox"><input type="checkbox" value="chinese"> Chinese</label>
-        <label class="checkbox"><input type="checkbox" value="czech/slovak"> Czech/Slovak</label>
-        <label class="checkbox"><input type="checkbox" value="german"> German</label>
-        <label class="checkbox"><input type="checkbox" value="indian"> Indian</label>
-        <label class="checkbox"><input type="checkbox" value="japanese"> Japanese</label>
-        <label class="checkbox"><input type="checkbox" value="mexican"> Mexican</label>
-        <label class="checkbox"><input type="checkbox" value="pizza"> Pizza</label>
-        <label class="checkbox"><input type="checkbox" value="thai"> Thai</label>
-        <label class="checkbox"><input type="checkbox" value="vegetarian"> Vegetarian</label>
+        <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
+          <input type="checkbox" value="{{name}}"> {{title}}</label>
       </div>
     </form>
   </div>
