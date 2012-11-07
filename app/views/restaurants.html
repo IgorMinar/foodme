@@ -56,8 +56,11 @@
           <b><a href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a></b>
           <div>{{restaurant.description}}</div>
         </td>
-        <td>{{restaurant.price | dollars}}</td>
-        <td>{{restaurant.rating | stars}}</td>
+
+        <td><fm-rating ng-model="$parent.restaurant.price" disabled="true" symbol="$" max="5">
+            </fm-rating></td>
+        <td><fm-rating ng-model="$parent.restaurant.rating" symbol="&#9733;" max="5"
+            disabled="true"></fm-rating></td>
       </tr>
     </table>
   </div>
