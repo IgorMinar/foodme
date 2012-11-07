@@ -2,32 +2,24 @@
   <a href="#/">Back to the restaurant list</a>
 </div>
 
+<div class="container fm-restaurant">
+  <h3>{{restaurant.name}}</h3>
+  <div>{{restaurant.price | dollars}} / {{restaurant.rating | stars}}</div>
+  <div>{{restaurant.address}}</div>
+
+</div>
+
 <div class="row-fluid">
 
-  <div class="span9 fm-restaurant-list">
-    <h4>{{restaurant.name}}</h4>
+  <div class="span9 fm-menu-list">
+    <h4>Menu</h4>
 
-
-
-    <table class="table table-hover">
-      <tr>
-        <th>Restaurant</th>
-        <th></th>
-        <th>Price</th>
-        <th>Rating</th>
-        <th>Hours</th>
-      </tr>
-      <tr ng-repeat="restaurant in restaurants">
-        <td><img ng-src="img/restaurants/{{restaurant.id}}.png"></td>
-        <td>
-          <b><a href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a></b>
-          <div>{{restaurant.description}}</div>
-        </td>
-        <td>{{restaurant.price | dollars}}</td>
-        <td>{{restaurant.rating | stars}}</td>
-        <td>{{restaurant.open}}</td>
-      </tr>
-    </table>
+    <ul>
+      <li ng-repeat="menuItem in restaurant.menuItems">
+        <span>{{menuItem.name}}</span>
+        <span class="pull-right">{{menuItem.price}}</span>
+      </li>
+    </ul>
   </div>
 
   <div class="span3 fm-order">
