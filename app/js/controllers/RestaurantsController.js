@@ -8,8 +8,6 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
 
   $scope.userInfo = userInfo;
 
-  $scope.allRestaurants = Restaurant.query();
-
   $scope.filter = {
     cuisine: [],
     price: null,
@@ -17,12 +15,11 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
   };
 
   var filterRestaurants = function() {
-    var restaurants = $scope.allRestaurants;
     var filter = $scope.filter;
 
     $scope.restaurants = [];
 
-    angular.forEach(restaurants, function(item, key) {
+    angular.forEach(allRestaurants, function(item, key) {
 
       if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
         return;
@@ -40,6 +37,7 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
     });
   };
 
-  $scope.$watch('allRestaurants', filterRestaurants, true);
+  var allRestaurants = Restaurant.query(filterRestaurants);
+
   $scope.$watch('filter', filterRestaurants, true);
 });
