@@ -43,6 +43,10 @@ Restaurant.prototype.update = function(data) {
       this[key] = data[key];
     }
   }, this);
+
+  this.menuItems = this.menuItems.map(function(data) {
+    return new MenuItem(data);
+  });
 };
 
 Restaurant.prototype.validate = function(errors) {

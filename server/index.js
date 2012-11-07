@@ -8,6 +8,18 @@ var MemoryStorage = require('./storage').Memory;
 var API_URL = '/api/restaurant';
 var API_URL_ID = API_URL + '/:id';
 
+var removeMenuItems = function(restaurant) {
+  var clone = {};
+
+  Object.getOwnPropertyNames(restaurant).forEach(function(key) {
+    if (key !== 'menuItems') {
+      clone[key] = restaurant[key];
+    }
+  });
+
+  return clone;
+};
+
 
 exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
   var app = express();
@@ -25,7 +37,7 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
 
   // API
   app.get(API_URL, function(req, res, next) {
-    res.send(200, storage.getAll());
+    res.send(200, storage.getAll().map(removeMenuItems));
   });
 
 
@@ -39,6 +51,17 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
     }
 
     return res.send(400, {error: errors});
+  });
+
+
+  app.get(API_URL_ID, function(req, res, next) {
+    var restaurant = storage.getById(req.params.id);
+
+    if (restaurant) {
+      return res.send(200, restaurant);
+    }
+
+    return res.send(400, {error: 'No restaurant with id "' + req.params.id + '"!'});
   });
 
 

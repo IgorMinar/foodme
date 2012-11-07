@@ -12,7 +12,7 @@ var MemoryStorage = function() {
   this.getById = function(id) {
     for (var i = 0; i < storage.length; i++) {
       if (storage[i].id === id) {
-        return storage[id];
+        return storage[i];
       }
     }
 
