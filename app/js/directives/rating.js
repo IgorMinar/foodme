@@ -16,25 +16,25 @@ foodMeApp.directive('fmRating', function() {
         scope.styles = styles = [];
 
         for(var i = 0; i < max; i ++) {
-          styles.push({ selected: false, hover: false });
+          styles.push({ 'fm-selected': false, 'fm-hover': false });
         }
       });
 
       scope.enter = function(index) {
         angular.forEach(styles, function(style, i) {
-          style.hover = i <= index;
+          style['fm-hover'] = i <= index;
         });
       };
 
       scope.leave = function(index) {
         angular.forEach(styles, function(style, i) {
-          style.hover = false;
+          style['fm-hover'] = false;
         });
       };
 
       scope.select = function(index) {
         angular.forEach(styles, function(style, i) {
-          style.selected = i <= index;
+          style['fm-selected'] = i <= index;
         });
         if (ngModel) {
           ngModel.$setViewValue(index);
@@ -48,7 +48,7 @@ foodMeApp.directive('fmRating', function() {
       }
     },
     template:
-      '<ul class="selector">' +
+      '<ul class="fm-rating">' +
         '<li ng-repeat="style in styles" ng-class="style" ' +
             'ng-click="select($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">' +
           '{{symbol}}' +

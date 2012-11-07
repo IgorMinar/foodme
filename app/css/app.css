@@ -86,3 +86,31 @@
   padding-top: 10px;
   padding-bottom: 20px;
 }
+
+
+.fm-rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.fm-rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fm-rating .fm-selected {
+  color: #000000;
+}
+
+.fm-rating .fm-hover {
+  text-shadow: white 0 0 2px,
+  white 0 0 2px,
+  white 0 0 2px,
+  white 0 0 2px,
+  blue 0 0 10px;
+}

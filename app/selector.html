@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" ng-app="foodMeApp">
+<head>
+  <meta charset="utf-8">
+  <title>FoodMe</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+  count = {{count}}
+  <fm-rating symbol="&#9733;" max="5" ng-model="$parent.count"></fm-rating>
+  <fm-rating symbol="$" max="5" ng-model="$parent.count" disabled="true"></fm-rating>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-resource.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers/IntroController.js"></script>
+  <script src="js/controllers/RestaurantsController.js"></script>
+  <script src="js/directives/rating.js"></script>
+  <script src="js/services/userInfo.js"></script>
+  <script src="js/filters/dollars.js"></script>
+  <script src="js/filters/stars.js"></script>
+</body>
+</html>
