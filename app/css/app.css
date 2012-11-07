@@ -147,6 +147,10 @@
   blue 0 0 10px;
 }
 
-.fn-restaurant {
-  width: 400px;
+.fm-restaurant-list th:first-child {
+  width: 500px;
+}
+
+.fm-restaurant-list th {
+  width: 100px;
 }
