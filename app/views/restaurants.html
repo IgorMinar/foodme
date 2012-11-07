@@ -18,17 +18,17 @@
       </select>
 
 
-      <h5>Rating</h5>
+      <h5>Rating</h5> <a ng-click="filter.rating = null">clear</a>
 
       <fm-rating symbol="&#9733;" max="5" ng-model="$parent.filter.rating"></fm-rating>
 
 
-      <h5>Price</h5>
+      <h5>Price</h5> <a ng-click="filter.price = null">clear</a>
 
       <fm-rating symbol="$" max="5" ng-model="$parent.filter.price"></fm-rating>
 
 
-      <h5>Cuisine</h5>
+      <h5>Cuisine</h5> <a ng-click="filter.cuisine = []">clear</a>
 
       <div fm-checkbox-list ng-model="filter.cuisine">
         <label class="checkbox"><input type="checkbox" value="african"> American</label>
