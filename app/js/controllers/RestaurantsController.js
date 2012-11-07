@@ -2,8 +2,8 @@
 
 foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location) {
 
-  if (!userInfo.zip) {
-    $location.url('/user-info')
+  if (!userInfo.address) {
+    $location.url('/user-info');
   }
 
   $scope.userInfo = userInfo;
