@@ -1,0 +1,40 @@
+Restaurant name,Restaurant ID,Cuisine,Opens,Closes,Days Open,Price,Rating,Location
+Esther's German Saloon,esthers,german,11:30:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",3,3,22 Teutonic Ave.
+Robatayaki Hachi,robatayaki,japanese,17:30:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,5,8 Hawthorne Ln.
+BBQ Tofu Paradise,tofuparadise,vegetarian,16:30:00,20:00:00,"Mo,We,Fr,Sa,Su",2,1,22A King West
+Le Bateau Rouge,bateaurouge,french,17:00:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",5,4,2 South Park Dr.
+Khartoum Khartoum,khartoum,african,11:00:00,14:00:00,"Mo,Tu,We,Th,Fr",3,2,1566 Maple Rd.
+Sally's Diner,sallys,american,8:30:00,20:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,3,96 College Blvd.
+Saucy Piggy,saucy,barbecue,15:00:00,22:00:00,"Tu,We,Th,Fr,Sa,Su",3,2,623 Industrial Rd.
+Czech Point,czechpoint,czech/slovak,10:30:00,21:30:00,"Mo,Tu,We,Th,Fr,Sa",1,4,5567 Queen-Mary Rd
+Der Speisewagen,speisewagen,german,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,5,402 College Blvd.
+Beijing Express,beijing,chinese,11:00:00,22:30:00,"Mo,We,Fr,Sa,Su",2,4,38 Teutonic Ave.
+Satay Village,satay,thai,17:30:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,2,12 High St.
+Cancun,cancun,mexican,11:30:00,23:00:00,"Mo,Tu,We,Th,Fr",3,3,2030 Maple Rd.
+Curry Up,curryup,indian,17:00:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,5,455 University
+Carthage,carthage,african,17:00:00,22:30:00,"Tu,We,Th,Fr,Sa,Su",2,1,59 Court Terrace
+Burgerama,burgerama,american,11:00:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa",5,4,456 University
+Three Little Pigs,littlepigs,barbecue,11:30:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,12 Summer Court
+Little Prague,littleprague,czech/slovak,11:00:00,22:00:00,"Mo,We,Fr,Sa,Su",4,3,44 Park Ave
+Kohl Haus,kohlhaus,german,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,3421 Queen-Mary Rd
+Dragon's Tail,dragon,chinese,17:00:00,2:00:00,"Mo,Tu,We,Th,Fr",1,4,8 Jasmine Rd.
+Hit Me Baby One More Thai,babythai,thai,15:00:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,5,12 Jasmine Rd.
+The Whole Tamale,wholetamale,mexican,10:30:00,21:30:00,"Tu,We,Th,Fr,Sa,Su",2,4,401 University
+Birmingham Bhangra,bhangra,indian,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",4,2,992 Riddick St.
+Taqueria,taqueria,mexican,11:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,3,12 North Circle Dr.
+Pedro's,pedros,mexican,17:30:00,22:00:00,"Mo,We,Fr,Sa,Su",4,5,5521 Alameda
+Super Wonton Express,superwonton,chinese,11:30:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",2,1,223 Milliways Ave
+Naan Sequitur,naansequitur,indian,17:00:00,22:00:00,"Mo,Tu,We,Th,Fr",5,4,"Unit 12, Olde Towne Mall"
+Sakura,sakura,japanese,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,"Unit 18, Olde Towne Mall"
+Shandong Lu,shandong,chinese,17:00:00,22:30:00,"Tu,We,Th,Fr,Sa,Su",4,3,335 University
+Curry Galore,currygalore,indian,11:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",3,2,56 Park Ave
+North by Northwest,north,cafe,6:00:00,18:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",1,4,201 University
+Full of Beans,beans,cafe,6:30:00,20:30:00,"Mo,We,Fr,Sa,Su",3,5,498 College Ave.
+Tropical Jeeve's Cafe,jeeves,cafe,7:00:00,14:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",2,4,550 Milliways Ave
+Zardoz Cafe,zardoz,cafe,10:30:00,0:00:00,"Mo,Tu,We,Th,Fr",4,2,6202 Alameda
+Angular Pizza,angular,pizza,6:00:00,0:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",1,5,2232 King St.
+Flavia,flavia,pizza,11:30:00,22:00:00,"Tu,We,Th,Fr,Sa,Su",4,5,401 Riddick St.
+Luigi's House of Pies,luigis,pizza,16:30:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa",2,1,5 Garcia Ave.
+Thick and Thin,thick,pizza,17:00:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",5,4,832 Dominican Ave.
+When in Rome,wheninrome,pizza,11:00:00,21:30:00,"Mo,We,Fr,Sa,Su",3,2,234 Valencia St.
+Pizza 76,pizza76,pizza,10:30:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,3,76 Market St.

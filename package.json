@@ -1,0 +1,30 @@
+{
+  "name": "FoodMe",
+  "version": "0.0.1",
+  "description": "Super awesome tutorial.",
+  "keywords": [],
+  "homepage": "http://angularjs.org/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular/foodme.git"
+  },
+  "author": "AngularJS Team",
+  "contributors": [
+    "Igor Minár <igor@angularjs.org",
+    "Miško Hevery <misko@angularjs.org",
+    "Vojta Jína <vojta@angularjs.org"
+  ],
+  "main": "scripts/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": ">= 3.0.0",
+    "csv": ">= 0.2.1",
+    "open": ">= 0.0.2"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "license": "MIT"
+}
