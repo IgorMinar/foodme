@@ -11,7 +11,7 @@ foodMeApp.factory('userInfo', function($rootScope, localStorage, $log) {
 
 
   $rootScope.$watch(function() { return userInfo; }, function() {
-    $window.localStorage.userInfo = JSON.stringify(userInfo);
+    localStorage.userInfo = JSON.stringify(userInfo);
   }, true);
 
   return userInfo;

@@ -1,7 +1,8 @@
 'use strict';
 
 foodMeApp.service('cart', function Cart(localStorage) {
-  var self = this;
+  var self = this,
+      bindings = [];
 
   this.add = function(item) {
     this.items.push(item);
@@ -9,12 +10,18 @@ foodMeApp.service('cart', function Cart(localStorage) {
   };
 
   this.remove = function(item) {
-    var index = this.cart.items.indexOf(item);
+    var index = this.items.indexOf(item);
     if (index >= 0) {
-      this.cart.items.splice(index, 1);
+      this.items.splice(index, 1);
     }
     serialize();
   }
+
+  this.total = function() {
+    return this.items.reduce(function(sum, item) {
+      return sum + Number(item.price);
+    }, 0);
+  };
 
   this.checkout = function() {
     localStorage.items = null;
@@ -23,24 +30,29 @@ foodMeApp.service('cart', function Cart(localStorage) {
   }
 
   function deserialize() {
-    self.items = read('cartItems', []);
-    self.restaurant = read('cartRestaurant', {});
-    self.payment = read('cartItems', {});
-  }
+    bindings.forEach(function(args) {
+      var json = localStorage[args[1]];
 
-  function read(name, defaultValue) {
-    var json = localStorage[name];
-
-    return json ? JSON.parse(json) : defaultValue;
+      self[args[0]] = json ? JSON.parse(json) : new args[2];
+    });
   }
 
   function serialize() {
-    localStorage.cart = JSON.stringify(self.items);
+    bindings.forEach(function(args) {
+      localStorage[args[1]] = JSON.stringify(self[args[0]]);
+    });
   }
 
-  this.items = null;
-  this.restaurant = null;
-  this.payment = null;
+  function bind() {
+    bindings.push(arguments);
+  }
 
+  this.items;
+  this.restaurant;
+  this.payment;
+
+  bind('items', 'cartItems', Array);
+  bind('restaurant', 'cartRestaurant', Object);
+  bind('payment', 'cartPayment', Object);
   deserialize();
 });

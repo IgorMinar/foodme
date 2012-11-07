@@ -15,9 +15,12 @@
     <h4>Menu</h4>
 
     <ul>
-      <li ng-repeat="menuItem in restaurant.menuItems">
+      <li ng-repeat="menuItem in restaurant.menuItems" class="fm-clear">
         <span>{{menuItem.name}}</span>
-        <span class="pull-right">{{menuItem.price}}</span>
+        <span class="pull-right">
+          {{menuItem.price | currency}}
+          <a href ng-click="cart.add(menuItem)"><i class="icon-plus-sign"></i></a>
+        </span>
       </li>
     </ul>
   </div>
@@ -25,10 +28,18 @@
   <div class="span3 fm-order">
     <h4>Your order</h4>
     <form>
-      <ul>
-        <li ng-repeat="item in cart.items">{{item.description}}</li>
+      <ul class="unstyled">
+        <li ng-repeat="item in cart.items">
+          <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
+          {{item.name}}
+        </li>
       </ul>
-      <button ng-disabled="!cart.items.length" ng-click='checkout()'>Checkout</button>
+      <div class="pull-right" ng-show="cart.items.length">
+        Total: {{cart.total() | currency}}
+      </div>
+      <div class="fm-clear">
+        <a href="#/checkout" ng-disabled="!cart.items.length" class="btn">Checkout</a>
+      </div>
     </form>
   </div>
 

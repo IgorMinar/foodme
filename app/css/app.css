@@ -199,3 +199,16 @@
   -moz-column-gap: 50px;
   column-gap: 50px;
 }
+
+.fm-clear {
+  clear: both;
+}
+
+.table th.fm-right,
+.table td.fm-right {
+  text-align: right;
+}
+.table th.fm-main,
+.table td.fm-main {
+  width: 100%
+}
