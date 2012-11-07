@@ -18,6 +18,9 @@ foodMeApp.config(function($routeProvider) {
       }).
       when('/how-it-works', {
         templateUrl: 'views/how-it-works.html'
+      }).
+      when('/help', {
+        templateUrl: 'views/help.html'
       });
 
 });
