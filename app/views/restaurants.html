@@ -57,23 +57,20 @@
       </ng-pluralize>
     </h4>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-striped">
       <tr>
-        <th><a ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th></th>
+        <th class="fn-restaurant"><a ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
         <th><a ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
         <th><a ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
-        <th>Hours</th>
       </tr>
       <tr ng-repeat="restaurant in restaurants">
-        <td><img ng-src="img/restaurants/{{restaurant.id}}.png"></td>
         <td>
-          <b><a href="#/restaurants/{{restaurant.id}}">{{restaurant.name}}</a></b>
+          <!-- <img ng-src="img/restaurants/{{restaurant.id}}.png"> -->
+          <b><a href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a></b>
           <div>{{restaurant.description}}</div>
         </td>
         <td>{{restaurant.price | dollars}}</td>
         <td>{{restaurant.rating | stars}}</td>
-        <td>{{restaurant.open}}</td>
       </tr>
     </table>
   </div>

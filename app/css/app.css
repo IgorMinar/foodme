@@ -37,6 +37,35 @@
   padding: 5px 10px 10px;
 }
 
+.fm-order {
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+
+  background-color: grey;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.fm-order > * {
+  padding-left: 10px;
+}
+
+.fm-order form {
+  background-color: #fff;
+
+  margin-left: -10px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding: 5px 10px 10px;
+}
+
 
 .fm-restaurant-list {
   border: 1px solid black;
@@ -116,4 +145,8 @@
   white 0 0 2px,
   white 0 0 2px,
   blue 0 0 10px;
+}
+
+.fn-restaurant {
+  width: 400px;
 }
