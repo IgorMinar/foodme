@@ -18,33 +18,37 @@
       </select>
 
 
-      <h5>Cousine</h5>
+      <h5>Cuisine</h5>
 
-      <label class="checkbox"><input type="checkbox"> African</label>
-      <label class="checkbox"><input type="checkbox"> American</label>
-      <label class="checkbox"><input type="checkbox"> Barbecue</label>
-      <label class="checkbox"><input type="checkbox"> Chinese</label>
-      <label class="checkbox"><input type="checkbox"> Czech/Slovak</label>
-      <label class="checkbox"><input type="checkbox"> German</label>
-      <label class="checkbox"><input type="checkbox"> Japanese</label>
+      <div fm-checkbox-list ng-model="filter.cuisine">
+        <label class="checkbox"><input type="checkbox" value="african"> American</label>
+        <label class="checkbox"><input type="checkbox" value="american"> American</label>
+        <label class="checkbox"><input type="checkbox" value="barbecue"> Barbecue</label>
+        <label class="checkbox"><input type="checkbox" value="cafe"> Cafe</label>
+        <label class="checkbox"><input type="checkbox" value="chinese"> Chinese</label>
+        <label class="checkbox"><input type="checkbox" value="czech/slovak"> Czech/Slovak</label>
+        <label class="checkbox"><input type="checkbox" value="german"> German</label>
+        <label class="checkbox"><input type="checkbox" value="indian"> Indian</label>
+        <label class="checkbox"><input type="checkbox" value="japanese"> Japanese</label>
+        <label class="checkbox"><input type="checkbox" value="mexican"> Mexican</label>
+        <label class="checkbox"><input type="checkbox" value="pizza"> Pizza</label>
+        <label class="checkbox"><input type="checkbox" value="thai"> Thai</label>
+        <label class="checkbox"><input type="checkbox" value="vegetarian"> Vegetarian</label>
+      </div>
 
 
       <h5>Price</h5>
 
-      <label class="checkbox"><input type="checkbox"> $</label>
-      <label class="checkbox"><input type="checkbox"> $$</label>
-      <label class="checkbox"><input type="checkbox"> $$$</label>
-      <label class="checkbox"><input type="checkbox"> $$$$</label>
-      <label class="checkbox"><input type="checkbox"> $$$$$</label>
+      <select ng-model="filter.price" ng-options="i for i in [null, 1, 2, 3, 4, 5]">
+        <option>{{i}}</option>
+      </select>
 
 
       <h5>Rating</h5>
 
-      <label class="checkbox"><input type="checkbox"> &#9733;</label>
-      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;</label>
-      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;</label>
-      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;&#9733;</label>
-      <label class="checkbox"><input type="checkbox"> &#9733;&#9733;&#9733;&#9733;&#9733;</label>
+      <select ng-model="filter.rating" ng-options="i for i in [null, 1, 2, 3, 4, 5]">
+        <option>{{i}}</option>
+      </select>
 
     </form>
   </div>
