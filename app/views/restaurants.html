@@ -12,10 +12,8 @@
 
       <h5>Deliver</h5>
 
-      <select class="span8">
-        <option>Today</option>
-        <option>Tomorrow</option>
-      </select>
+      <select ng-model="filter.delivery" ng-options="o.id as o.title for o in DELIVERY_OPTIONS"
+              class="span8"></select>
 
 
       <h5>Rating</h5> <a ng-click="filter.rating = null">clear</a>

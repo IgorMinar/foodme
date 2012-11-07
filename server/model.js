@@ -6,6 +6,22 @@ var isString = function(value) {
   return typeof value === 'string';
 };
 
+var DAYS = {
+  Su: 0,
+  Mo: 1,
+  Tu: 2,
+  We: 3,
+  Th: 4,
+  Fr: 5,
+  Sa: 6
+};
+
+var parseDays = function(str) {
+  return str.split(',').map(function(day) {
+    return DAYS[day];
+  });
+};
+
 
 var Restaurant = function(data) {
   // defaults
@@ -43,7 +59,7 @@ Restaurant.fromArray = function(data) {
     cuisine: data[2],
     opens: data[3],
     closes: data[4],
-    days: data[5].split(','),
+    days: parseDays(data[5]),
     price: parseInt(data[6], 10),
     rating: parseInt(data[7], 10),
     location: data[8]

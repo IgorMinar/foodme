@@ -22,9 +22,16 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
     vegetarian: 'Vegetarian'
   };
 
+  var today = new Date().getDay();
+  $scope.DELIVERY_OPTIONS = [
+    {id: today, title: 'Today'},
+    {id: (today + 1) % 7, title: 'Tomorrow'}
+  ];
+
   $scope.userInfo = userInfo;
 
   var filter = $scope.filter = {
+    delivery: today,
     cuisine: [],
     price: null,
     rating: null,
@@ -58,11 +65,15 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
         return;
       }
 
-      if (filter.price && filter.price != item.price) {
+      if (filter.price && filter.price !== item.price) {
         return;
       }
 
-      if (filter.rating && filter.rating != item.rating) {
+      if (filter.rating && filter.rating !== item.rating) {
+        return;
+      }
+
+      if (item.days.indexOf(filter.delivery) === -1) {
         return;
       }
 
