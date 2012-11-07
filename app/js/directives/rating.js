@@ -8,7 +8,7 @@ foodMeApp.directive('fmRating', function() {
       max: '@',
       disabled: '@'
     },
-    require: '?ngModel',
+    require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
       var styles;
 
@@ -18,6 +18,8 @@ foodMeApp.directive('fmRating', function() {
         for(var i = 0; i < max; i ++) {
           styles.push({ 'fm-selected': false, 'fm-hover': false });
         }
+
+        ngModel.$render();
       });
 
       scope.enter = function(index) {
@@ -37,16 +39,12 @@ foodMeApp.directive('fmRating', function() {
       scope.select = function(index) {
         if (scope.disabled) return;
         internalSelect(index);
-        if (ngModel) {
-          ngModel.$setViewValue(index + 1);
-        }
+        ngModel.$setViewValue(index + 1);
       };
 
-      if (ngModel) {
-        ngModel.$render = function() {
-          internalSelect(ngModel.$viewValue - 1);
-        };
-      }
+      ngModel.$render = function() {
+        internalSelect(ngModel.$viewValue - 1);
+      };
 
       function internalSelect(index) {
         angular.forEach(styles, function(style, i) {
