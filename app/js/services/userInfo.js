@@ -1,8 +1,8 @@
 'use strict';
 
-foodMeApp.factory('userInfo', function($rootScope, $window, $log) {
+foodMeApp.factory('userInfo', function($rootScope, localStorage, $log) {
 
-  var userInfoString = $window.localStorage.userInfo;
+  var userInfoString = localStorage.userInfo;
 
   var userInfo = userInfoString ? JSON.parse(userInfoString) : {
     name: undefined,

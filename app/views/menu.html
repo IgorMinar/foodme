@@ -26,12 +26,9 @@
     <h4>Your order</h4>
     <form>
       <ul>
-        <li>some</li>
-        <li>stuff</li>
-        <li>here</li>
-        <li>now</li>
+        <li ng-repeat="item in cart.items">{{item.description}}</li>
       </ul>
-      <button >Checkout</button>
+      <button ng-disabled="!cart.items.length" ng-click='checkout()'>Checkout</button>
     </form>
   </div>
 

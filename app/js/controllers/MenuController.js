@@ -1,6 +1,8 @@
 'use strict';
 
-foodMeApp.controller('MenuController', function MenuController($scope, $routeParams, Restaurant) {
+foodMeApp.controller('MenuController', function MenuController($scope, $routeParams, Restaurant, cart) {
+
+  $scope.cart = cart;
 
   $scope.restaurant = {
     id: 'esthers',

@@ -1,8 +1,6 @@
 'use strict';
 
 describe('rating', function() {
-  beforeEach(module('foodMeApp'));
-
   beforeEach(function() {
     this.addMatchers({
       toHaveClass: function(className, count) {
