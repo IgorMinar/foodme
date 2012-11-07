@@ -61,3 +61,28 @@
   background-color: #fff;
   margin-bottom: 0px;
 }
+
+
+.fm-static {
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  border-top-left-radius: 6px;
+
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topright: 6px;
+  border-top-right-radius: 6px;
+
+  background-color: grey;
+}
+
+.fm-static > * {
+  padding-left: 10px;
+}
+
+.fm-static > div {
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}

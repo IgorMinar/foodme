@@ -13,8 +13,8 @@ foodMeApp.config(function($routeProvider) {
         controller: 'IntroController',
         templateUrl: 'views/intro.html'
       }).
-      when('/about-us', {
-        templateUrl: 'views/about-us.html'
+      when('/who-we-are', {
+        templateUrl: 'views/who-we-are.html'
       }).
       when('/how-it-works', {
         templateUrl: 'views/how-it-works.html'
