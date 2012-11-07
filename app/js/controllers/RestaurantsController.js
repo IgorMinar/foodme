@@ -8,19 +8,36 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
 
   $scope.userInfo = userInfo;
 
-  $scope.filter = {
+  var filter = $scope.filter = {
     cuisine: [],
     price: null,
-    rating: null
+    rating: null,
+    sortBy: 'name',
+    sortAsc: true
   };
 
-  var filterRestaurants = function() {
-    var filter = $scope.filter;
+  $scope.sortBy = function(key) {
+    if (filter.sortBy === key) {
+      filter.sortAsc = !filter.sortAsc;
+    } else {
+      filter.sortBy = key;
+      filter.sortAsc = true;
+    }
+  };
 
+  $scope.sortIconFor = function(key) {
+    if (filter.sortBy !== key) {
+      return '';
+    }
+
+    return filter.sortAsc ? '\u25B2' : '\u25BC';
+  };
+
+  var filterAndSortRestaurants = function() {
     $scope.restaurants = [];
 
+    // filter
     angular.forEach(allRestaurants, function(item, key) {
-
       if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
         return;
       }
@@ -35,9 +52,22 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
 
       $scope.restaurants.push(item);
     });
+
+    // sort
+    $scope.restaurants.sort(function(a, b) {
+      if (a[filter.sortBy] > b[filter.sortBy]) {
+        return filter.sortAsc ? 1 : -1;
+      }
+
+      if (a[filter.sortBy] < b[filter.sortBy]) {
+        return filter.sortAsc ? -1 : 1;
+      }
+
+      return 0;
+    });
   };
 
-  var allRestaurants = Restaurant.query(filterRestaurants);
+  var allRestaurants = Restaurant.query(filterAndSortRestaurants);
 
-  $scope.$watch('filter', filterRestaurants, true);
+  $scope.$watch('filter', filterAndSortRestaurants, true);
 });

@@ -59,10 +59,10 @@
 
     <table class="table table-hover">
       <tr>
-        <th>Restaurant</th>
+        <th><a ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
         <th></th>
-        <th>Price</th>
-        <th>Rating</th>
+        <th><a ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
+        <th><a ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
         <th>Hours</th>
       </tr>
       <tr ng-repeat="restaurant in restaurants">
