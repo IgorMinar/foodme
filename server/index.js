@@ -7,6 +7,7 @@ var MemoryStorage = require('./storage').Memory;
 
 var API_URL = '/api/restaurant';
 var API_URL_ID = API_URL + '/:id';
+var API_URL_ORDER = '/api/order';
 
 var removeMenuItems = function(restaurant) {
   var clone = {};
@@ -51,6 +52,10 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
     }
 
     return res.send(400, {error: errors});
+  });
+
+  app.post(API_URL_ORDER, function(req, res, next) {
+    console.log(req.body);
   });
 
 

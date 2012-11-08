@@ -16,6 +16,8 @@
   background-color: grey;
 
   margin-bottom: 20px;
+
+  overflow: hidden;
 }
 
 .fm-panel > * {
@@ -35,10 +37,17 @@
   padding-bottom: 0px;
 }
 
+.fm-panel .container {
+  width: 100%;
+}
+
 .fm-callout {
   width: 400px;
 }
 
+.fm-right {
+  text-align: right;
+}
 
 
 /****************************************
@@ -113,13 +122,23 @@
   column-gap: 50px;
 }
 
+.fm-menu-list li,
+.fm-panel li,
+.fm-clear {
+  clear: both;
+}
+
 
 /* checkout */
 
-.fm-checkout table th:first-child,
-.fm-checkout table td:first-child{
+.fm-checkout table th:nth-child(2),
+.fm-checkout table td:nth-child(2) {
   width: 100%;
   text-align: left;
+}
+
+.fm-checkout table td:nth-child(1) input {
+  width: 30px;
 }
 
 .fm-checkout table th,
@@ -131,6 +150,6 @@
   text-align: right;
 }
 
-.fm-checkout button {
-  margin-left: 838px;
+input.ng-invalid {
+  border: 1px solid red;
 }

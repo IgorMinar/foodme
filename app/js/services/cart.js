@@ -1,12 +1,30 @@
 'use strict';
 
-foodMeApp.service('cart', function Cart(localStorage) {
-  var self = this,
-      bindings = [];
+foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $http, alert) {
+  var self = this;
 
-  this.add = function(item) {
-    this.items.push(item);
-    serialize();
+  this.add = function(item, restaurant) {
+    if (!this.restaurant || !this.restaurant.id) {
+      this.restaurant = {
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description
+      };
+    } else if (this.restaurant.id == restaurant.id) {
+      this.items.forEach(function(cartItem) {
+        if (item && cartItem.name == item.name) {
+          cartItem.qty ++;
+          item = null;
+        }
+      });
+      if (item) {
+        item = angular.copy(item);
+        item.qty = 1;
+        this.items.push(item);
+      }
+    } else {
+      alert('Can not mix menu items from different restaurants.');
+    }
   };
 
   this.remove = function(item) {
@@ -14,37 +32,45 @@ foodMeApp.service('cart', function Cart(localStorage) {
     if (index >= 0) {
       this.items.splice(index, 1);
     }
-    serialize();
   }
 
   this.total = function() {
     return this.items.reduce(function(sum, item) {
-      return sum + Number(item.price);
+      return sum + Number(item.price * item.qty);
     }, 0);
   };
 
-  this.checkout = function() {
-    localStorage.items = null;
-    localStorage.restaurant = null;
-    deserialize();
+  this.order = function() {
+    if (this.items.length) {
+      $http.post('/api/order', {
+        items: this.items,
+        restaurant: this.restaurant,
+        payment: this.payment,
+        deliverTo: userInfo
+      });
+
+      this.reset();
+    }
   }
 
-  function deserialize() {
-    bindings.forEach(function(args) {
-      var json = localStorage[args[1]];
+  this.reset = function() {
+    this.items = [];
+    this.restaurant = {};
+  };
 
-      self[args[0]] = json ? JSON.parse(json) : new args[2];
-    });
-  }
+  function bind(localName, storageName, Type) {
+    var json = localStorage[storageName];
 
-  function serialize() {
-    bindings.forEach(function(args) {
-      localStorage[args[1]] = JSON.stringify(self[args[0]]);
-    });
-  }
+    self[localName] = json ? JSON.parse(json) : new Type;
 
-  function bind() {
-    bindings.push(arguments);
+    $rootScope.$watch(
+      function() { return self[localName]; },
+      function(value) {
+        if (value) {
+          localStorage[storageName] = JSON.stringify(value);
+        }
+      },
+      true);
   }
 
   this.items;
@@ -54,5 +80,4 @@ foodMeApp.service('cart', function Cart(localStorage) {
   bind('items', 'cartItems', Array);
   bind('restaurant', 'cartRestaurant', Object);
   bind('payment', 'cartPayment', Object);
-  deserialize();
 });

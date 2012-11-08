@@ -29,6 +29,10 @@ foodMeApp.config(function($routeProvider) {
       when('/checkout', {
         controller: 'CheckoutController',
         templateUrl: 'views/checkout.html'
+      }).
+      when('/submitOrder', {
+        controller: 'SubmitOrderController',
+        templateUrl: 'views/submitOrder.html'
       });
 
 });

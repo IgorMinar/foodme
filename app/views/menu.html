@@ -11,7 +11,7 @@
 
 <div class="row-fluid">
 
-  <div class="span9 fm-panel fm-menu-list">
+  <div class="span8 fm-panel fm-menu-list">
     <h4>Menu</h4>
 
     <ul>
@@ -19,23 +19,25 @@
         <span>{{menuItem.name}}</span>
         <span class="pull-right">
           {{menuItem.price | currency}}
-          <a href ng-click="cart.add(menuItem)"><i class="icon-plus-sign"></i></a>
+          <a href ng-click="cart.add(menuItem, restaurant)"><i class="icon-plus-sign"></i></a>
         </span>
       </li>
     </ul>
   </div>
 
-  <div class="span3 fm-panel">
+  <div class="span4 fm-panel">
     <h4>Your order</h4>
     <form>
       <ul class="unstyled">
         <li ng-repeat="item in cart.items">
           <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
+          {{item.qty}}
           {{item.name}}
+          <span class="pull-right">{{item.price | currency}}</span>
         </li>
       </ul>
       <div class="pull-right" ng-show="cart.items.length">
-        Total: {{cart.total() | currency}}
+        <b>Total: {{cart.total() | currency}}</b>
       </div>
       <div class="fm-clear">
         <a href="#/checkout" ng-disabled="!cart.items.length" class="btn">Checkout</a>
