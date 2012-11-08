@@ -1,121 +1,49 @@
-/* app css stylesheet */
+/****************************************
+ * general purpose css-only components  *
+ ****************************************/
 
-.fm-intro-bkg {
-  background-image: url(../img/intro_background.jpg);
-  opacity: 0.4;
-  height: 705px;
+.fm-panel {
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+
+  background-color: grey;
+
+  margin-bottom: 20px;
 }
 
+.fm-panel > * {
+  padding: 10px 10px 20px 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  background: #fff;
+}
 
-.fm-deliver-to {
+.fm-panel *:last-child {
+  margin-bottom: 0px;
+}
+
+.fm-panel > h4 {
+  background-color: grey;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.fm-callout {
   width: 400px;
 }
 
 
-.fm-filter {
-  border: 1px solid black;
 
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
-
-  background-color: grey;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-
-.fm-filter form {
-  background-color: #fff;
-
-  margin-left: -10px;
-  margin-bottom: 0px;
-  padding-left: 10px;
-  padding: 5px 10px 10px;
-}
-
-.fm-order {
-  border: 1px solid black;
-
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
-
-  background-color: grey;
-  padding-left: 10px;
-  margin-bottom: 10px;
-}
-
-.fm-order > * {
-  padding-left: 10px;
-}
-
-.fm-order form {
-  background-color: #fff;
-
-  margin-left: -10px;
-  margin-bottom: 0px;
-  padding-left: 10px;
-  padding: 5px 10px 10px;
-}
-
-
-.fm-restaurant-list {
-  border: 1px solid black;
-
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
-
-  background-color: grey;
-  margin-bottom: 10px;
-}
-
-.fm-restaurant-list > * {
-  padding-left: 10px;
-}
-
-.fm-restaurant-list table {
-  background-color: #fff;
-  margin-bottom: 0px;
-}
-
-
-.fm-static {
-  border: 1px solid black;
-
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
-
-  background-color: grey;
-}
-
-.fm-static > * {
-  padding-left: 10px;
-}
-
-.fm-static > div {
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
+/****************************************
+ * angular components                   *
+ ****************************************/
 
 .fm-rating {
   color: #a9a9a9;
@@ -147,6 +75,23 @@
   blue 0 0 10px;
 }
 
+
+/****************************************
+ * route specific css                   *
+ ****************************************/
+
+
+/* intro */
+
+.fm-intro-bkg {
+  background-image: url(../img/intro_background.jpg);
+  opacity: 0.4;
+  height: 705px;
+}
+
+
+/* restaurant list */
+
 .fm-restaurant-list th:first-child {
   width: 500px;
 }
@@ -155,42 +100,10 @@
   width: 100px;
 }
 
-.fm-restaurant {
-  margin-bottom: 20px;
-}
 
-.fm-restaurant > h3 {
-  margin-bottom: 5px;
-}
-
-.fm-menu-list {
-  border: 1px solid black;
-
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-left-radius: 6px;
-
-  -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  border-top-right-radius: 6px;
-
-  background-color: grey;
-}
-
-.fm-menu-list > * {
-  padding-left: 10px;
-  margin-left: 0px;
-}
-
-.fm-menu-list *:last-child {
-  margin-bottom: 0px;
-}
+/* menu */
 
 .fm-menu-list ul {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -200,15 +113,24 @@
   column-gap: 50px;
 }
 
-.fm-clear {
-  clear: both;
+
+/* checkout */
+
+.fm-checkout table th:first-child,
+.fm-checkout table td:first-child{
+  width: 100%;
+  text-align: left;
 }
 
-.table th.fm-right,
-.table td.fm-right {
+.fm-checkout table th,
+.fm-checkout table td {
   text-align: right;
 }
-.table th.fm-main,
-.table td.fm-main {
-  width: 100%
+
+.fm-checkout table tr:last-child th {
+  text-align: right;
+}
+
+.fm-checkout button {
+  margin-left: 838px;
 }

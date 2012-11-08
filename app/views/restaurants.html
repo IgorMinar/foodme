@@ -1,11 +1,11 @@
-<div class="breadcrumb fm-deliver-to">
+<div class="breadcrumb fm-callout">
   Deliver to: {{userInfo.address}}
   <a href="#/user-info" class="pull-right">Change</a>
 </div>
 
 <div class="row-fluid">
 
-  <div class="span3 fm-filter">
+  <div class="span3 fm-panel">
     <h4>Filter Restaurants</h4>
 
     <form>
@@ -35,7 +35,7 @@
     </form>
   </div>
 
-  <div class="span9 fm-restaurant-list">
+  <div class="span9 fm-panel fm-restaurant-list">
     <h4>
       <ng-pluralize count="restaurants.length"
                     when="{'0'    : 'No restaurants found. :-(',

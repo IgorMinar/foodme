@@ -11,11 +11,11 @@
 
 <div class="row-fluid">
 
-  <div class="span9 fm-menu-list">
+  <div class="span9 fm-panel fm-menu-list">
     <h4>Menu</h4>
 
     <ul>
-      <li ng-repeat="menuItem in restaurant.menuItems" class="fm-clear">
+      <li ng-repeat="menuItem in restaurant.menuItems">
         <span>{{menuItem.name}}</span>
         <span class="pull-right">
           {{menuItem.price | currency}}
@@ -25,7 +25,7 @@
     </ul>
   </div>
 
-  <div class="span3 fm-order">
+  <div class="span3 fm-panel">
     <h4>Your order</h4>
     <form>
       <ul class="unstyled">

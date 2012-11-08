@@ -2,33 +2,29 @@
   <a href="#/">Back to the restaurant list</a>
 </div>
 
-<div class="container">
+<div class="container fm-panel fm-checkout">
     <h4>Menu</h4>
 
-    <div class="">
-      <form>
-        <table class="table table-hover table-striped">
-          <tr>
-            <th class="fm-main">Description</th>
-            <th class="fm-right">Amount</th>
-            <th></th>
-          </tr>
-          <tr ng-repeat="item in cart.items">
-            <td>{{item.name}}</td>
-            <td class="fm-right">{{item.price | currency}}</td>
-            <td><a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a></td>
-          </tr>
-          <tr>
-            <th class="fm-right">Total:</th>
-            <th class="fm-right">{{ cart.total() | currency }}</th>
-            <th></th>
-          </tr>
-        </table>
-        <div class="pull-right">
-          <button>Purchase</button>
-        </div>
-      </form>
-    </div>
+    <form>
+      <table class="table table-hover table-striped">
+        <tr>
+          <th>Description</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+        <tr ng-repeat="item in cart.items">
+          <td>{{item.name}}</td>
+          <td>{{item.price | currency}}</td>
+          <td><a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a></td>
+        </tr>
+        <tr>
+          <th>Total:</th>
+          <th>{{ cart.total() | currency }}</th>
+          <th></th>
+        </tr>
+      </table>
+      <button>Purchase</button>
+    </form>
   </div>
 
 </div>
