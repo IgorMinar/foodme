@@ -27,7 +27,7 @@
   background: #fff;
 }
 
-.fm-panel *:last-child {
+.fm-panel > *:last-child {
   margin-bottom: 0px;
 }
 
@@ -112,20 +112,56 @@
 
 /* menu */
 
-.fm-menu-list ul {
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-
-  -webkit-column-gap: 50px;
-  -moz-column-gap: 50px;
-  column-gap: 50px;
+.fm-restaurant  {
+  margin-bottom: 20px;
 }
 
-.fm-menu-list li,
-.fm-panel li,
-.fm-clear {
-  clear: both;
+.fm-restaurant h3 {
+  margin-top: 0;
+}
+
+
+.fm-menu-list li span {
+  padding-right: 20px;
+}
+
+.fm-menu-list .icon-plus-sign {
+  visibility: hidden;
+}
+
+.fm-menu-list li:hover .icon-plus-sign {
+  visibility: visible;
+}
+
+.fm-menu-list li:hover {
+  color: black;
+}
+
+.fm-menu-list ul li {
+  text-align: center;
+}
+
+.fm-cart li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.fm-cart .icon-remove-sign {
+  visibility: hidden;
+}
+
+.fm-cart li:hover .icon-remove-sign {
+  visibility: visible;
+}
+
+.fm-cart form {
+  padding-left: 2px;
+}
+
+.fm-cart p {
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 

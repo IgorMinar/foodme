@@ -45,8 +45,8 @@
         <tr>
           <th>Qty</th>
           <th>Description</th>
-          <th>Unit</th>
-          <th>Total</th>
+          <th>Price</th>
+          <th>Subtotal</th>
           <th></th>
         </tr>
         <tr ng-repeat="item in cart.items">
@@ -66,7 +66,7 @@
       </table>
 
       <div class="fm-right">
-        <a href="#/menu/{{restaurantId}}" class="btn">&lt;&lt; back to menu</a>
+        <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a>
         <a href ng-click="cart.reset()" class="btn btn-danger">Clear Cart</a>
         <a href="#/submitOrder" class="btn btn-primary" ng-disabled="form.$invalid"
                 ng-click="purchase()">Purchase</a>
