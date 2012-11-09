@@ -150,6 +150,10 @@ fm-deliver-to {
   height: 150px;
 }
 
+.fm-restaurant .fm-rating {
+  display: block;
+}
+
 .fm-menu-list li {
   list-style-type: none;
 }
