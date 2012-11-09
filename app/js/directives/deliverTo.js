@@ -1,3 +1,5 @@
+'use strict';
+
 foodMeApp.directive('fmDeliverTo', function() {
   return {
     restrict: 'E',

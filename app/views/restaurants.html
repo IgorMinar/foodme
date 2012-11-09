@@ -51,8 +51,10 @@
       <tr ng-repeat="restaurant in restaurants">
         <td>
           <!-- <img ng-src="img/restaurants/{{restaurant.id}}.jpg" class="img-rounded pull-left"> -->
-          <img src="img/100x100.gif" class="img-rounded pull-left">
-          <b><a href="#/menu/{{restaurant.id}}">{{restaurant.name}}</a></b>
+          <a href="#/menu/{{restaurant.id}}">
+            <img src="img/100x100.gif" class="img-rounded pull-left">
+            <b>{{restaurant.name}}</b>
+          </a>
           <p>{{restaurant.description}}</p>
         </td>
 

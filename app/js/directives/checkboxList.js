@@ -1,3 +1,5 @@
+'use strict';
+
 foodMeApp.directive('fmCheckboxList', function() {
   return {
     require: 'ngModel',

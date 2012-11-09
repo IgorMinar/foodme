@@ -15,6 +15,5 @@ foodMeApp.factory('userInfo', function($rootScope, localStorage, $log) {
   }, true);
 
   return userInfo;
-
 });
 
