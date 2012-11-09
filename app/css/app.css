@@ -111,6 +111,10 @@ fm-deliver-to {
 
 /* restaurant list */
 
+.fm-restaurant-list {
+  min-height: 646px !important;
+}
+
 .fm-restaurant-list table {
   margin: -10px -20px -20px -10px;
   width: 700px;
