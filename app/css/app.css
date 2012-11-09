@@ -77,11 +77,11 @@
 }
 
 .fm-rating .fm-hover {
-  text-shadow: white 0 0 2px,
-  white 0 0 2px,
-  white 0 0 2px,
-  white 0 0 2px,
-  blue 0 0 10px;
+  text-shadow: white 0 0  2px,
+               white 0 0  2px,
+               white 0 0  2px,
+               white 0 0  2px,
+               blue  0 0 10px;
 }
 
 
