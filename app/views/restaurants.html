@@ -23,11 +23,12 @@
       <fm-rating symbol="$" max="5" ng-model="$parent.filter.price"></fm-rating>
 
 
-      <h5>Cuisine</h5> <a ng-click="filter.cuisine = []">clear</a>
+      <h5>Cuisine</h5>
 
       <div fm-checkbox-list ng-model="filter.cuisine">
         <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
-          <input type="checkbox" value="{{name}}"> {{title}}</label>
+          <input type="checkbox" value="{{name}}"> {{title}}
+        </label>
       </div>
     </form>
   </div>
