@@ -39,8 +39,9 @@
       <li ng-repeat="menuItem in restaurant.menuItems">
         <span>{{menuItem.name}}</span>
         <span>
-          {{menuItem.price}}
-          <a href ng-click="cart.add(menuItem, restaurant)"><i class="icon-plus-sign"></i></a>
+          <a href ng-click="cart.add(menuItem, restaurant)">
+            {{menuItem.price}} <i class="icon-plus-sign"></i>
+          </a>
         </span>
       </li>
     </ul>

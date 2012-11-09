@@ -134,6 +134,15 @@
   padding-right: 20px;
 }
 
+.fm-menu-list a {
+  color: inherit;
+}
+
+.fm-menu-list a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .fm-menu-list .icon-plus-sign {
   visibility: hidden;
 }
