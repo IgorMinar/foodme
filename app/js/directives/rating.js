@@ -42,6 +42,11 @@ foodMeApp.directive('fmRating', function() {
         ngModel.$setViewValue(index + 1);
       };
 
+      scope.clear = function() {
+        ngModel.$setViewValue(null);
+        internalSelect(-1);
+      }
+
       ngModel.$render = function() {
         internalSelect(ngModel.$viewValue - 1);
       };
@@ -58,6 +63,7 @@ foodMeApp.directive('fmRating', function() {
             'ng-click="select($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">' +
           '{{symbol}}' +
         '</li>' +
-      '</ul>'
+      '</ul>' +
+      '<a ng-hide="disabled" ng-click="clear()">clear</a>'
   };
 });
