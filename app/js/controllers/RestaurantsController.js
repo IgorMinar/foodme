@@ -1,6 +1,6 @@
 'use strict';
 
-foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, Restaurant) {
+foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, Restaurant, today) {
 
   if (!userInfo.address) {
     $location.url('/user-info');
@@ -22,16 +22,15 @@ foodMeApp.controller('RestaurantsController', function($scope, userInfo, $locati
     vegetarian: 'Vegetarian'
   };
 
-  var today = new Date().getDay();
   $scope.DELIVERY_OPTIONS = [
-    {id: today, title: 'Today'},
-    {id: (today + 1) % 7, title: 'Tomorrow'}
+    {id: today(), title: 'Today'},
+    {id: (today() + 1) % 7, title: 'Tomorrow'}
   ];
 
   $scope.userInfo = userInfo;
 
   var filter = $scope.filter = {
-    delivery: today,
+    delivery: today()   ,
     cuisine: [],
     price: null,
     rating: null,

@@ -10,7 +10,9 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
         name: restaurant.name,
         description: restaurant.description
       };
-    } else if (this.restaurant.id == restaurant.id) {
+    }
+
+    if (this.restaurant.id == restaurant.id) {
       this.items.forEach(function(cartItem) {
         if (item && cartItem.name == item.name) {
           cartItem.qty ++;

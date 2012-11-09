@@ -12,7 +12,4 @@ foodMeApp.controller('CheckoutController', function($scope, cart, userInfo) {
     { type:'discover', label:'Discover' }
   ];
 
-  $scope.checkout = function() {
-
-  };
 });
