@@ -3,6 +3,8 @@
  ****************************************/
 
 .fm-panel {
+  background-color: #fff;
+
   border: 1px solid black;
 
   -webkit-border-top-left-radius: 3px;
@@ -13,28 +15,16 @@
   -moz-border-radius-topright: 3px;
   border-top-right-radius: 3px;
 
-  background-color: grey;
-
   margin-bottom: 20px;
+  padding: 10px 10px 20px 10px;
 
   overflow: hidden;
 }
 
-.fm-panel > * {
-  padding: 10px 10px 20px 10px;
-  margin-left: 0px;
-  margin-right: 0px;
-  background: #fff;
-}
-
-.fm-panel > *:last-child {
-  margin-bottom: 0px;
-}
-
 .fm-panel > h4 {
   background-color: grey;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  margin: -10px -10px 10px -10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .fm-panel .container {
@@ -101,6 +91,11 @@
 
 /* restaurant list */
 
+.fm-restaurant-list table {
+  margin: -10px -20px -20px -10px;
+  width: 700px;
+}
+
 .fm-restaurant-list th:first-child {
   width: 500px;
 }
@@ -129,6 +124,10 @@
 .fm-restaurant img {
   width: 150px;
   height: 150px;
+}
+
+.fm-menu-list li {
+  list-style-type: none;
 }
 
 .fm-menu-list li span {
@@ -176,6 +175,11 @@
 
 
 /* checkout */
+
+.fm-checkout table {
+  width: 960px;
+  margin-left: -10px;
+}
 
 .fm-checkout table th:nth-child(2),
 .fm-checkout table td:nth-child(2) {
