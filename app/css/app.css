@@ -109,6 +109,12 @@
   width: 100px;
 }
 
+.fm-restaurant-list img {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+
 
 /* menu */
 
@@ -120,6 +126,10 @@
   margin-top: 0;
 }
 
+.fm-restaurant img {
+  width: 150px;
+  height: 150px;
+}
 
 .fm-menu-list li span {
   padding-right: 20px;
