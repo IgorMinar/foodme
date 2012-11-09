@@ -1,11 +1,11 @@
 'use strict';
 
-describe('IntroController', function() {
+describe('CustomerController', function() {
   var userInfo;
 
   beforeEach(module(function($provide) {
     userInfo = {
-      name: 'userName',
+      name: 'Bob Green',
       address: '123 Main St; Anytown AB 12345'
     };
     $provide.value('userInfo', userInfo);
@@ -14,9 +14,9 @@ describe('IntroController', function() {
   it('should set user name and location', inject(function($location, $controller) {
     var scope = {};
 
-    $controller('IntroController', {$scope:scope});
+    $controller('CustomerController', {$scope:scope});
 
-    expect(scope.userName).toEqual('userName');
+    expect(scope.customerName).toEqual('Bob Green');
     expect(scope.address).toEqual('123 Main St; Anytown AB 12345');
 
     $location.url('/someUrl');

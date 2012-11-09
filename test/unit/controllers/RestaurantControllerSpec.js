@@ -23,7 +23,7 @@ describe('RestaurantsController', function() {
     it('should redirect to user-info route if no address',
         inject(function($location) {
           cntrlFactory();
-          expect($location.url()).toEqual('/user-info');
+          expect($location.url()).toEqual('/customer');
         })
     );
 

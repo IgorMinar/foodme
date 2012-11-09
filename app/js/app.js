@@ -13,9 +13,17 @@ foodMeApp.config(function($routeProvider) {
         controller: 'MenuController',
         templateUrl: 'views/menu.html'
       }).
-      when('/user-info', {
-        controller: 'IntroController',
-        templateUrl: 'views/intro.html'
+      when('/customer', {
+        controller: 'CustomerController',
+        templateUrl: 'views/customer.html'
+      }).
+      when('/checkout', {
+        controller: 'CheckoutController',
+        templateUrl: 'views/checkout.html'
+      }).
+      when('/thank-you', {
+        controller: 'ThankYouController',
+        templateUrl: 'views/thank-you.html'
       }).
       when('/who-we-are', {
         templateUrl: 'views/who-we-are.html'
@@ -25,14 +33,6 @@ foodMeApp.config(function($routeProvider) {
       }).
       when('/help', {
         templateUrl: 'views/help.html'
-      }).
-      when('/checkout', {
-        controller: 'CheckoutController',
-        templateUrl: 'views/checkout.html'
-      }).
-      when('/thank-you', {
-        controller: 'ThankYouController',
-        templateUrl: 'views/thank-you.html'
       });
 
 });

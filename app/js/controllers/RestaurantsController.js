@@ -3,7 +3,7 @@
 foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, Restaurant, today) {
 
   if (!userInfo.address) {
-    $location.url('/user-info');
+    $location.url('/customer');
   }
 
   $scope.CUISINE_OPTIONS = {

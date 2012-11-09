@@ -1,10 +1,11 @@
 'use strict';
 
-describe('FoodMeController', function() {
-  it('should check if route is', inject(function($location, $controller) {
+describe('NavbarController', function() {
+  it('should check if string matches current location path',
+      inject(function($location, $controller) {
     var scope = {};
 
-    $controller('FoodMeController', {$scope:scope});
+    $controller('NavbarController', {$scope:scope});
 
     $location.path('/abc');
 

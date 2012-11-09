@@ -76,7 +76,7 @@ describe('cart', function() {
         "payment":{},
         "deliverTo":{}
       }).respond({});
-      cart.order();
+      cart.submitOrder();
     });
   });
 
