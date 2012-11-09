@@ -89,6 +89,12 @@ fm-rating:hover a {
 }
 
 
+fm-deliver-to {
+  display: block;
+  height: 64px;
+}
+
+
 /****************************************
  * route specific css                   *
  ****************************************/
