@@ -55,7 +55,8 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE) {
   });
 
   app.post(API_URL_ORDER, function(req, res, next) {
-    console.log(req.body);
+    console.log(req.body)
+    return res.send(201, { orderId: Date.now()});
   });
 
 

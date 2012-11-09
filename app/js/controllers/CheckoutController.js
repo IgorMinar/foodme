@@ -13,4 +13,10 @@ foodMeApp.controller('CheckoutController', function($scope, cart, userInfo, $loc
     { type:'discover', label:'Discover' }
   ];
 
+  $scope.purchase = function() {
+    $scope.submitting = true;
+    cart.submitOrder().then(function(orderId) {
+      $location.path('thank-you').search({orderId: orderId});
+    });
+  };
 });

@@ -42,16 +42,17 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
     }, 0);
   };
 
-  this.order = function() {
+  this.submitOrder = function() {
     if (this.items.length) {
-      $http.post('/api/order', {
+      return $http.post('/api/order', {
         items: this.items,
         restaurant: this.restaurant,
         payment: this.payment,
         deliverTo: userInfo
+      }).then(function(response) {
+        self.reset();
+        return response.data.orderId;
       });
-
-      this.reset();
     }
   }
 
