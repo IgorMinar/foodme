@@ -2,37 +2,35 @@
   <div class="container fm-panel fm-checkout">
     <h4>Menu</h4>
 
-    <div class="container">
-      <div class="row">
-        <div class="span6">
-          <h5>Deliver To:</h5>
-          <div>{{user.name}}</div>
-          <div>{{user.address}}</div>
-          <a href="#/customer">Change</a>
+    <div class="row">
+      <div class="span6">
+        <h5>Deliver To:</h5>
+        <div>{{user.name}}</div>
+        <div>{{user.address}}</div>
+        <a href="#/customer">Change</a>
+      </div>
+      <div class="span6">
+        <h5>Payment:</h5>
+        <div class="control-group" ng-class="{error: form.ccType.$invalid}">
+          <select ng-model="cart.payment.type" class="input-medium" name="ccType"
+                  required
+                  ng-options="card.type as card.label for card in cards"></select>
         </div>
-        <div class="span6">
-          <h5>Payment:</h5>
-          <div class="control-group" ng-class="{error: form.ccType.$invalid}">
-            <select ng-model="cart.payment.type" class="input-medium" name="ccType"
-                    required
-                    ng-options="card.type as card.label for card in cards"></select>
-          </div>
-          <div class="control-group" ng-class="{error: form.ccNum.$invalid}">
-            <input type="text" ng-model="cart.payment.number" name="ccNum"
-                   placeholder="Card number" required
-                   maxlength="16" length="16" ng-pattern="/\d{16}/">
-          </div>
-          <span class="control-group" ng-class="{error: form.ccExp.$invalid}">
-            <input type="text" ng-model="cart.payment.expire" name="ccExp"
-                   placeholder="mm/yyyy" class="input-medium" required
-                   maxlength="16" length="16" ng-pattern="/\d\d\/\d\d\d\d/">
-          </span>
-          <span class="control-group" ng-class="{error: form.ccCvc.$invalid}">
-            <input type="text" ng-model="cart.payment.cvc" name="ccCvc"
-                   placeholder="CVC" class="input-small" required
-                   maxlength="4" ng-pattern="/\d{3,4}/">
-          </span>
+        <div class="control-group" ng-class="{error: form.ccNum.$invalid}">
+          <input type="text" ng-model="cart.payment.number" name="ccNum"
+                 placeholder="Card number" required
+                 maxlength="16" length="16" ng-pattern="/\d{16}/">
         </div>
+        <span class="control-group" ng-class="{error: form.ccExp.$invalid}">
+          <input type="text" ng-model="cart.payment.expire" name="ccExp"
+                 placeholder="mm/yyyy" class="input-medium" required
+                 maxlength="16" length="16" ng-pattern="/\d\d\/\d\d\d\d/">
+        </span>
+        <span class="control-group" ng-class="{error: form.ccCvc.$invalid}">
+          <input type="text" ng-model="cart.payment.cvc" name="ccCvc"
+                 placeholder="CVC" class="input-small" required
+                 maxlength="4" ng-pattern="/\d{3,4}/">
+        </span>
       </div>
     </div>
 
