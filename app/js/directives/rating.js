@@ -57,6 +57,13 @@ foodMeApp.directive('fmRating', function() {
         });
       }
     },
-    templateUrl: 'js/directives/rating.html'
+    template:
+      '<ul class="fm-rating" ng-class="{pointer:!disabled}">' +
+        '<li ng-repeat="style in styles" ng-class="style" ' +
+            'ng-click="select($index)" ng-mouseenter="enter($index)" ng-mouseleave="leave($index)">' +
+          '{{symbol}}' +
+        '</li>' +
+      '</ul>' +
+      '<a ng-hide="disabled" ng-click="clear()">clear</a>'
   };
 });
