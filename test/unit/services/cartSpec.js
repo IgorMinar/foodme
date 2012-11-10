@@ -66,7 +66,7 @@ describe('cart', function() {
   });
 
 
-  describe('order', function() {
+  describe('submitOrder', function() {
     it('should post order to server', function() {
       cart.add({name:'other', price:7}, {id: 123, name:'restaurantA'});
 

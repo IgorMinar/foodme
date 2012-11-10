@@ -1,17 +1,24 @@
-basePath = '../';
+basePath = '../app/';
 
 files = [
   JASMINE,
   JASMINE_ADAPTER,
 
-  'app/lib/angular/angular.js',
-  'app/lib/angular/angular-*.js',
-  'test/lib/angular/angular-mocks.js',
+  'lib/angular/angular.js',
+  'lib/angular/angular-*.js',
+  '../test/lib/angular/angular-mocks.js',
 
-  'app/js/app.js',
-  'app/js/**/*.js',
-  'test/unit/**/*.js'
+  'js/app.js',
+  'js/**/*.js',
+  '../test/unit/**/*.js',
+
+  // templates
+  'js/directives/**/*.html'
 ];
+
+preprocessors = {
+  '**/*.html': 'html2js'
+};
 
 autoWatch = true;
 
