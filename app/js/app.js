@@ -34,5 +34,4 @@ foodMeApp.config(function($routeProvider) {
       when('/help', {
         templateUrl: 'views/help.html'
       });
-
 });

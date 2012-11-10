@@ -12,10 +12,10 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
       };
     }
 
-    if (this.restaurant.id == restaurant.id) {
+    if (this.restaurant.id === restaurant.id) {
       this.items.forEach(function(cartItem) {
-        if (item && cartItem.name == item.name) {
-          cartItem.qty ++;
+        if (item && cartItem.name === item.name) {
+          cartItem.qty++;
           item = null;
         }
       });
@@ -34,7 +34,7 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
     if (index >= 0) {
       this.items.splice(index, 1);
     }
-  }
+  };
 
   this.total = function() {
     return this.items.reduce(function(sum, item) {
@@ -54,17 +54,17 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
         return response.data.orderId;
       });
     }
-  }
+  };
 
   this.reset = function() {
     this.items = [];
     this.restaurant = {};
   };
 
-  function bind(localName, storageName, Type) {
+  var bind = function(localName, storageName, Type) {
     var json = localStorage[storageName];
 
-    self[localName] = json ? JSON.parse(json) : new Type;
+    self[localName] = json ? JSON.parse(json) : new Type();
 
     $rootScope.$watch(
       function() { return self[localName]; },
@@ -74,11 +74,7 @@ foodMeApp.service('cart', function Cart(localStorage, userInfo, $rootScope, $htt
         }
       },
       true);
-  }
-
-  this.items;
-  this.restaurant;
-  this.payment;
+  };
 
   bind('items', 'cartItems', Array);
   bind('restaurant', 'cartRestaurant', Object);
