@@ -1,7 +1,7 @@
 'use strict';
 
-describe('CustomerController', function() {
-  var userInfo;
+ddescribe('CustomerController', function() {
+  var userInfo, scope;
 
   beforeEach(module(function($provide) {
     userInfo = {
@@ -11,20 +11,32 @@ describe('CustomerController', function() {
     $provide.value('userInfo', userInfo);
   }));
 
-  it('should set user name and location', inject(function($location, $controller) {
-    var scope = {};
-
+  beforeEach(inject(function($controller) {
+    scope = {};
     $controller('CustomerController', {$scope:scope});
+  }));
 
+
+  it('should set user name and address from userInfo', function() {
     expect(scope.customerName).toEqual('Bob Green');
     expect(scope.address).toEqual('123 Main St; Anytown AB 12345');
+  });
 
-    $location.url('/someUrl');
-    expect($location.url()).toEqual('/someUrl');
+  describe('findRestaurants', function() {
 
-    scope.findRestaurants('newName', 'newAddress');
-    expect($location.url()).toEqual('/');
-    expect(userInfo.name).toEqual('newName');
-    expect(userInfo.address).toEqual('newAddress');
-  }));
+    it('should save customer name and address to userInfo', function() {
+      scope.findRestaurants('newName', 'newAddress');
+
+      expect(userInfo.name).toEqual('newName');
+      expect(userInfo.address).toEqual('newAddress');
+    });
+
+    it('should redirect the user to restaurant list', inject(function($location) {
+      $location.url('/someUrl');
+      expect($location.url()).toEqual('/someUrl');
+
+      scope.findRestaurants('newName', 'newAddress');
+      expect($location.url()).toEqual('/');
+    }));
+  });
 });
