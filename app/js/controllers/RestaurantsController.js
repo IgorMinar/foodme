@@ -39,6 +39,15 @@ foodMeApp.controller('RestaurantsController',
     sortAsc: true
   };
 
+  $scope.sortBy = function(key) {
+    if (filter.sortBy === key) {
+      filter.sortAsc = !filter.sortAsc;
+    } else {
+      filter.sortBy = key;
+      filter.sortAsc = true;
+    }
+  };
+
   $scope.sortIconFor = function(key) {
     if (filter.sortBy !== key) {
       return '';
@@ -47,7 +56,7 @@ foodMeApp.controller('RestaurantsController',
     return filter.sortAsc ? '\u25B2' : '\u25BC';
   };
 
-  var filterRestaurants = function() {
+  var filterAndSortRestaurants = function() {
     $scope.restaurants = [];
 
     // filter
@@ -70,9 +79,22 @@ foodMeApp.controller('RestaurantsController',
 
       $scope.restaurants.push(item);
     });
+
+    // sort
+    $scope.restaurants.sort(function(a, b) {
+      if (a[filter.sortBy] > b[filter.sortBy]) {
+        return filter.sortAsc ? 1 : -1;
+      }
+
+      if (a[filter.sortBy] < b[filter.sortBy]) {
+        return filter.sortAsc ? -1 : 1;
+      }
+
+      return 0;
+    });
   };
 
-  var allRestaurants = Restaurant.query(filterRestaurants);
+  var allRestaurants = Restaurant.query(filterAndSortRestaurants);
 
-  $scope.$watch('filter', filterRestaurants, true);
+  $scope.$watch('filter', filterAndSortRestaurants, true);
 });
