@@ -38,6 +38,45 @@ foodMeApp.controller('RestaurantsController',
   };
 
 
-  $scope.restaurants = Restaurant.query();
+  var filterRestaurants = function() {
+    $scope.restaurants = [];
 
+    // filter
+    angular.forEach(allRestaurants, function(item, key) {
+      if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
+        return;
+      }
+
+      if (filter.price && filter.price !== item.price) {
+        return;
+      }
+
+      if (filter.rating && filter.rating !== item.rating) {
+        return;
+      }
+
+      if (item.days.indexOf(filter.delivery) === -1) {
+        return;
+      }
+
+      $scope.restaurants.push(item);
+    });
+
+    // sort
+    $scope.restaurants.sort(function(a, b) {
+      if (a[filter.sortBy] > b[filter.sortBy]) {
+        return filter.sortAsc ? 1 : -1;
+      }
+
+      if (a[filter.sortBy] < b[filter.sortBy]) {
+        return filter.sortAsc ? -1 : 1;
+      }
+
+      return 0;
+    });
+  };
+
+  var allRestaurants = Restaurant.query(filterRestaurants);
+
+  $scope.$watch('filter', filterRestaurants, true);
 });
