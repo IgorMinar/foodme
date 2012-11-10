@@ -3,6 +3,10 @@
 foodMeApp.controller('RestaurantsController',
     function RestaurantsController($scope, userInfo, $location, Restaurant, today) {
 
+  if (!userInfo.address) {
+    $location.url('/customer');
+  }
+
   $scope.CUISINE_OPTIONS = {
     african: 'African',
     american: 'American',
