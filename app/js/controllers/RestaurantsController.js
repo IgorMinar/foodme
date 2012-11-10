@@ -1,6 +1,7 @@
 'use strict';
 
-foodMeApp.controller('RestaurantsController', function($scope, userInfo, $location, Restaurant, today) {
+foodMeApp.controller('RestaurantsController',
+    function RestaurantsController($scope, userInfo, $location, Restaurant, today) {
 
   if (!userInfo.address) {
     $location.url('/customer');

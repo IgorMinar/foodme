@@ -1,6 +1,7 @@
 'use strict';
 
-foodMeApp.controller('CheckoutController', function($scope, cart, userInfo, $location) {
+foodMeApp.controller('CheckoutController',
+    function CheckoutController($scope, cart, userInfo, $location) {
   $scope.cart = cart;
   $scope.restaurantId = cart.restaurant.id;
   $scope.user = userInfo;
