@@ -14,43 +14,17 @@
         <th>Rating</th>
       </tr>
 
-      <tr>
+      <tr ng-repeat="restaurant in restaurants">
         <td>
-          <a href="#/menu/angular">
-            <img ng-src="img/restaurants/angular.jpg" class="img-rounded pull-left">
-            <b>Angular Pizza</b>
+          <a href="#/menu/{{restaurant.id}}">
+            <img ng-src="img/restaurants/{{restaurant.id}}.jpg" class="img-rounded pull-left">
+            <b>{{restaurant.name}}</b>
           </a>
-          <p>Home of the superheroic pizza!</p>
+          <p>{{restaurant.description}}</p>
         </td>
 
-        <td>1</td>
-        <td>5</td>
-      </tr>
-
-      <tr>
-        <td>
-          <a href="#/menu/tofuparadise">
-            <img ng-src="img/restaurants/tofuparadise.jpg" class="img-rounded pull-left">
-            <b>BBQ Tofu Paradise</b>
-          </a>
-          <p>Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers.</p>
-        </td>
-
-        <td>2</td>
-        <td>1</td>
-      </tr>
-
-      <tr>
-        <td>
-          <a href="#/menu/beijing">
-            <img ng-src="img/restaurants/beijing.jpg" class="img-rounded pull-left">
-            <b>Beijing Express</b>
-          </a>
-          <p>Fast, healthy, Chinese food. Family specials for takeout or delivery. Try our Peking Duck!</p>
-        </td>
-
-        <td>2</td>
-        <td>4</td>
+        <td>{{restaurant.price}}</td>
+        <td>{{restaurant.rating}}</td>
       </tr>
     </table>
   </div>
