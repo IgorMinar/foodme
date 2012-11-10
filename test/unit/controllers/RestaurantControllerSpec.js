@@ -1,6 +1,6 @@
 'use strict';
 
-describe('RestaurantsController', function() {
+ddescribe('RestaurantsController', function() {
   var userInfo, scope, restaurants, $httpBackend, dayOfWeek = 0;
   var cntrlFactory;
 
