@@ -20,14 +20,14 @@ describe('RestaurantsController', function() {
   }));
 
   describe('info redirection', function() {
-    it('should redirect to user-info route if no address',
+    it('should redirect to customer route if no address',
         inject(function($location) {
           cntrlFactory();
           expect($location.url()).toEqual('/customer');
         })
     );
 
-    it('should not redirect to user-info route if address',
+    it('should not redirect to customer route if address',
         inject(function($location) {
           userInfo.address = 'is defined';
           cntrlFactory();
