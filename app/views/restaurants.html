@@ -1,66 +1,56 @@
-<fm-deliver-to></fm-deliver-to>
-
 <div class="row-fluid">
 
   <div class="span3 fm-panel">
     <h4>Filter Restaurants</h4>
-
-    <form>
-
-      <h5>Deliver</h5>
-
-      <select ng-model="filter.delivery" ng-options="o.id as o.title for o in DELIVERY_OPTIONS"
-              class="span8"></select>
-
-
-      <h5>Rating</h5>
-
-      <fm-rating symbol="&#9733;" max="5" ng-model="$parent.filter.rating"></fm-rating>
-
-
-      <h5>Price</h5>
-
-      <fm-rating symbol="$" max="5" ng-model="$parent.filter.price"></fm-rating>
-
-
-      <h5>Cuisine</h5>
-
-      <div fm-checkbox-list ng-model="filter.cuisine">
-        <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
-          <input type="checkbox" value="{{name}}"> {{title}}
-        </label>
-      </div>
-    </form>
   </div>
 
   <div class="span9 fm-panel fm-restaurant-list">
-    <h4>
-      <ng-pluralize count="restaurants.length"
-                    when="{'0'    : 'No restaurants found. :-(',
-                           'one'  : '1 restaurant found!',
-                           'other': '{} restaurants found!'}">
-      </ng-pluralize>
-    </h4>
+    <h4></h4>
 
     <table class="table table-hover table-striped">
       <tr>
-        <th><a ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
-        <th><a ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
-        <th><a ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Rating</th>
       </tr>
-      <tr ng-repeat="restaurant in restaurants">
+
+      <tr>
         <td>
-          <a href="#/menu/{{restaurant.id}}">
-            <img ng-src="img/restaurants/{{restaurant.id}}.jpg" class="img-rounded pull-left">
-            <b>{{restaurant.name}}</b>
+          <a href="#/menu/angular">
+            <img ng-src="img/restaurants/angular.jpg" class="img-rounded pull-left">
+            <b>Angular Pizza</b>
           </a>
-          <p>{{restaurant.description}}</p>
+          <p>Home of the superheroic pizza!</p>
         </td>
 
-        <td><fm-rating ng-model="$parent.restaurant.price" disabled="true" symbol="$" max="5">
-            </fm-rating></td>
-        <td><fm-rating ng-model="$parent.restaurant.rating" symbol="&#9733;" max="5"
-            disabled="true"></fm-rating></td>
+        <td>1</td>
+        <td>5</td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href="#/menu/tofuparadise">
+            <img ng-src="img/restaurants/tofuparadise.jpg" class="img-rounded pull-left">
+            <b>BBQ Tofu Paradise</b>
+          </a>
+          <p>Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers.</p>
+        </td>
+
+        <td>2</td>
+        <td>1</td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href="#/menu/beijing">
+            <img ng-src="img/restaurants/beijing.jpg" class="img-rounded pull-left">
+            <b>Beijing Express</b>
+          </a>
+          <p>Fast, healthy, Chinese food. Family specials for takeout or delivery. Try our Peking Duck!</p>
+        </td>
+
+        <td>2</td>
+        <td>4</td>
       </tr>
     </table>
   </div>

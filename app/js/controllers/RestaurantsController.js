@@ -1,100 +1,16 @@
 'use strict';
 
 foodMeApp.controller('RestaurantsController',
-    function RestaurantsController($scope, userInfo, $location, Restaurant, today) {
+    function RestaurantsController($scope) {
 
-  if (!userInfo.address) {
-    $location.url('/customer');
-  }
-
-  $scope.CUISINE_OPTIONS = {
-    african: 'African',
-    american: 'American',
-    barbecue: 'Barbecue',
-    cafe: 'Cafe',
-    chinese: 'Chinese',
-    'czech/slovak': 'Czech / Slovak',
-    german: 'German',
-    indian: 'Indian',
-    japanese: 'Japanese',
-    mexican: 'Mexican',
-    pizza: 'Pizza',
-    thai: 'Thai',
-    vegetarian: 'Vegetarian'
-  };
-
-  $scope.DELIVERY_OPTIONS = [
-    {id: today(), title: 'Today'},
-    {id: (today() + 1) % 7, title: 'Tomorrow'}
-  ];
-
-  $scope.userInfo = userInfo;
-
-  var filter = $scope.filter = {
-    delivery: today()   ,
-    cuisine: [],
-    price: null,
-    rating: null,
-    sortBy: 'name',
-    sortAsc: true
-  };
-
-  $scope.sortBy = function(key) {
-    if (filter.sortBy === key) {
-      filter.sortAsc = !filter.sortAsc;
-    } else {
-      filter.sortBy = key;
-      filter.sortAsc = true;
-    }
-  };
-
-  $scope.sortIconFor = function(key) {
-    if (filter.sortBy !== key) {
-      return '';
-    }
-
-    return filter.sortAsc ? '\u25B2' : '\u25BC';
-  };
-
-  var filterAndSortRestaurants = function() {
-    $scope.restaurants = [];
-
-    // filter
-    angular.forEach(allRestaurants, function(item, key) {
-      if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
-        return;
-      }
-
-      if (filter.price && filter.price !== item.price) {
-        return;
-      }
-
-      if (filter.rating && filter.rating !== item.rating) {
-        return;
-      }
-
-      if (item.days.indexOf(filter.delivery) === -1) {
-        return;
-      }
-
-      $scope.restaurants.push(item);
-    });
-
-    // sort
-    $scope.restaurants.sort(function(a, b) {
-      if (a[filter.sortBy] > b[filter.sortBy]) {
-        return filter.sortAsc ? 1 : -1;
-      }
-
-      if (a[filter.sortBy] < b[filter.sortBy]) {
-        return filter.sortAsc ? -1 : 1;
-      }
-
-      return 0;
-    });
-  };
-
-  var allRestaurants = Restaurant.query(filterAndSortRestaurants);
-
-  $scope.$watch('filter', filterAndSortRestaurants, true);
+  $scope.restaurants = [{
+    name: 'Angular Pizza', id: 'angular', price: 1, rating: 5,
+    description: 'Home of the superheroic pizza!'
+  }, {
+    name: 'BBQ Tofu Paradise', id: 'tofuparadise', price: 2, rating: 1,
+    description: 'Home of the superheroic pizza!Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers.'
+  }, {
+    name: 'Beijing Express', id: 'beijing', price: 2, rating: 4,
+    description: 'Fast, healthy, Chinese food. Family specials for takeout or delivery. Try our Peking Duck!'
+  }];
 });
