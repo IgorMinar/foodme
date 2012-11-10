@@ -1,6 +1,6 @@
 'use strict';
 
-describe('deliverTo', function() {
+ddescribe('deliverTo', function() {
   var userInfo, element;
 
 
