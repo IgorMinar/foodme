@@ -13,5 +13,4 @@ foodMeApp.controller('CustomerController',
 
     $location.url('/');
   };
-
 });
