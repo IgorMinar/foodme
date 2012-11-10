@@ -8,5 +8,14 @@ foodMeApp.config(function($routeProvider) {
       when('/', {
         controller: 'RestaurantsController',
         templateUrl: 'views/restaurants.html'
+      }).
+      when('/who-we-are', {
+        templateUrl: 'views/who-we-are.html'
+      }).
+      when('/how-it-works', {
+        templateUrl: 'views/how-it-works.html'
+      }).
+      when('/help', {
+        templateUrl: 'views/help.html'
       });
 });
