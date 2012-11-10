@@ -106,7 +106,8 @@ describe('RestaurantsController', function() {
     }));
   });
 
-  describe('filter', function() {
+
+  ddescribe('filter', function() {
     var r1 = {name:'a', cuisine:'african',    days:'0',        price: 1, rating: 1};
     var r2 = {name:'z', cuisine:'vegeterian', days:'01233456', price: 5, rating: 5};
 
@@ -150,15 +151,6 @@ describe('RestaurantsController', function() {
       scope.filter.delivery = 6;
       scope.$apply();
       expect(scope.restaurants).toEqualData([r2]);
-    });
-
-    it('should sort in both directions', function() {
-      scope.$apply();
-      expect(scope.restaurants).toEqualData([r1, r2]);
-
-      scope.filter.sortAsc = false;
-      scope.$apply();
-      expect(scope.restaurants).toEqualData([r2, r1]);
     });
   });
 

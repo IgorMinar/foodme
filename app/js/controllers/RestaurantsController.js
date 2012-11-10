@@ -31,70 +31,13 @@ foodMeApp.controller('RestaurantsController',
   $scope.userInfo = userInfo;
 
   var filter = $scope.filter = {
-    delivery: today()   ,
+    delivery: today(),
     cuisine: [],
     price: null,
-    rating: null,
-    sortBy: 'name',
-    sortAsc: true
+    rating: null
   };
 
-  $scope.sortBy = function(key) {
-    if (filter.sortBy === key) {
-      filter.sortAsc = !filter.sortAsc;
-    } else {
-      filter.sortBy = key;
-      filter.sortAsc = true;
-    }
-  };
 
-  $scope.sortIconFor = function(key) {
-    if (filter.sortBy !== key) {
-      return '';
-    }
+  $scope.restaurants = Restaurant.query();
 
-    return filter.sortAsc ? '\u25B2' : '\u25BC';
-  };
-
-  var filterAndSortRestaurants = function() {
-    $scope.restaurants = [];
-
-    // filter
-    angular.forEach(allRestaurants, function(item, key) {
-      if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
-        return;
-      }
-
-      if (filter.price && filter.price !== item.price) {
-        return;
-      }
-
-      if (filter.rating && filter.rating !== item.rating) {
-        return;
-      }
-
-      if (item.days.indexOf(filter.delivery) === -1) {
-        return;
-      }
-
-      $scope.restaurants.push(item);
-    });
-
-    // sort
-    $scope.restaurants.sort(function(a, b) {
-      if (a[filter.sortBy] > b[filter.sortBy]) {
-        return filter.sortAsc ? 1 : -1;
-      }
-
-      if (a[filter.sortBy] < b[filter.sortBy]) {
-        return filter.sortAsc ? -1 : 1;
-      }
-
-      return 0;
-    });
-  };
-
-  var allRestaurants = Restaurant.query(filterAndSortRestaurants);
-
-  $scope.$watch('filter', filterAndSortRestaurants, true);
 });
