@@ -75,7 +75,7 @@ describe('RestaurantsController', function() {
     }));
   });
 
-  describe("sortBy order", function() {
+  ddescribe("sortBy order", function() {
     var up = '\u25B2', down = '\u25BC', none = '';
 
     it('should sort and revers sort', inject(function() {
@@ -106,7 +106,7 @@ describe('RestaurantsController', function() {
     }));
   });
 
-  describe('filter', function() {
+  ddescribe('filter', function() {
     var r1 = {name:'a', cuisine:'african',    days:'0',        price: 1, rating: 1};
     var r2 = {name:'z', cuisine:'vegeterian', days:'01233456', price: 5, rating: 5};
 
