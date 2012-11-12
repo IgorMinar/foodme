@@ -28,6 +28,61 @@
 }
 
 
+/****************************************
+ * angular components                   *
+ ****************************************/
+
+.fm-rating {
+  color: #a9a9a9;
+  margin: 0;
+  padding: 0;
+
+}
+
+ul.fm-rating {
+  display: inline-block;
+}
+
+.fm-rating-pointer {
+  cursor: pointer;
+}
+
+.fm-rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fm-rating .fm-selected {
+  color: #000000;
+}
+
+.fm-rating .fm-hover {
+  text-shadow: white 0 0  2px,
+  white 0 0  2px,
+  white 0 0  2px,
+  white 0 0  2px,
+  blue  0 0 10px;
+}
+
+fm-rating a {
+  visibility: hidden;
+  padding-left: 7px;
+}
+
+fm-rating:hover a {
+  visibility: visible;
+}
+
+
+.fm-deliver-to {
+  display: block;
+  width: 450px;
+}
+
+
 
 /****************************************
  * route specific css                   *
@@ -40,4 +95,30 @@
   background-image: url(../img/customer_bkg.jpg);
   opacity: 0.4;
   height: 705px;
+}
+
+
+/* restaurant list */
+
+.fm-restaurant-list {
+  min-height: 646px !important;
+}
+
+.fm-restaurant-list table {
+  margin: -10px -20px -20px -10px;
+  width: 700px;
+}
+
+.fm-restaurant-list th:first-child {
+  width: 500px;
+}
+
+.fm-restaurant-list th {
+  width: 100px;
+}
+
+.fm-restaurant-list img {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
 }
