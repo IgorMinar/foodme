@@ -8,6 +8,5 @@ foodMeApp.controller('RestaurantsController',
   }
 
   $scope.restaurants = Restaurant.query();
-  $scope.customer = customer;
 
 });
