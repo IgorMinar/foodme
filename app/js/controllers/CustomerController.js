@@ -10,5 +10,7 @@ foodMeApp.controller('CustomerController',
   $scope.findRestaurants = function(customerName, customerAddress) {
     customer.name = customerName;
     customer.address = customerAddress;
+
+    $location.url('/');
   };
 });
