@@ -4,11 +4,13 @@ foodMeApp.controller('CustomerController',
     function CustomerController($scope, customer) {
 
   $scope.customerName = customer.name;
-  $scope.address = customer.address;
+  $scope.customerAddress = customer.address;
 
 
-  $scope.findRestaurants = function(customerName, address) {
+  $scope.findRestaurants = function(customerName, customerAddress) {
     customer.name = customerName;
-    customer.address = address;
+    customer.address = customerAddress;
+
+    $location.url('/');
   };
 });
