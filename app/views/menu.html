@@ -36,7 +36,7 @@
 
     <ul>
       <li ng-repeat="menuItem in restaurant.menuItems">
-        <a href>
+        <a href ng-click="cart.add(menuItem, restaurant)">
           <span>{{menuItem.name}}</span>
           <span>{{menuItem.price}}</span>
           <i class="icon-plus-sign"></i>
@@ -50,20 +50,16 @@
     <h4>Your order</h4>
     <form>
       <ul class="unstyled">
-        <li>
-          <a href><i class="icon-remove-sign"></i></a>
-          2 &times; Thin crust broccoli, chicken, and mozarella
-        </li>
-        <li>
-          <a href><i class="icon-remove-sign"></i></a>
-          1 &times; Greek salad
+        <li ng-repeat="item in cart.items">
+          <a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a>
+          {{item.qty}} &times; {{item.name}}
         </li>
       </ul>
-      <div class="pull-right">
-        <a href="#/checkout" class="btn">Checkout</a>
+      <div class="pull-right" ng-show="cart.items.length">
+        <a href="#/checkout" ng-disabled="!cart.items.length" class="btn">Checkout</a>
       </div>
       <p>
-        <b>Total: $23.99</b>
+        <b>Total: {{cart.total() | currency}}</b>
       </p>
     </form>
   </div>
