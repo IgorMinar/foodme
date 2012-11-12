@@ -1,0 +1,40 @@
+Restaurant name,Restaurant ID,Cuisine,Opens,Closes,Days Open,Price,Rating,Location,Description
+Esther's German Saloon,esthers,german,11:30:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",3,3,22 Teutonic Ave.,"German home-cooked meals and fifty-eight different beers on tap. To get more authentic, you'd need to be wearing lederhosen."
+Robatayaki Hachi,robatayaki,japanese,17:30:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,5,8 Hawthorne Ln.,"Japanese food the way you like it. Fast, fresh, grilled."
+BBQ Tofu Paradise,tofuparadise,vegetarian,16:30:00,20:00:00,"Mo,We,Fr,Sa,Su",2,1,22A King West,"Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers."
+Le Bateau Rouge,bateaurouge,french,17:00:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",5,4,2 South Park Dr.,"Fine French dining in a romantic setting. From soupe à l'oignon to coq au vin, let our chef delight you with a local take on authentic favorites."
+Khartoum Khartoum,khartoum,african,11:00:00,14:00:00,"Mo,Tu,We,Th,Fr",3,2,1566 Maple Rd.,"African homestyle cuisine, cooked fresh daily."
+Sally's Diner,sallys,american,8:30:00,20:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,3,96 College Blvd.,"Food like mom cooked, if you grew up in Iowa and mom ran a diner. Try our blue plate special!"
+Saucy Piggy,saucy,barbecue,15:00:00,22:00:00,"Tu,We,Th,Fr,Sa,Su",3,2,623 Industrial Rd.,"Pork. We know how to cook it. Award-winning BBQ sauce, and meat with all the trimmings."
+Czech Point,czechpoint,czech/slovak,10:30:00,21:30:00,"Mo,Tu,We,Th,Fr,Sa",1,4,5567 Queen-Mary Rd,Make a point of trying our knedlíky and homemade soups. We have free wifi and the best desserts and coffee. 
+Der Speisewagen,speisewagen,german,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,5,402 College Blvd.,Award-winning schnitzel and other favorites. Look for our restored food truck in the NE corner of the College St lot.
+Beijing Express,beijing,chinese,11:00:00,22:30:00,"Mo,We,Fr,Sa,Su",2,4,38 Teutonic Ave.,"Fast, healthy, Chinese food. Family specials for takeout or delivery. Try our Peking Duck!"
+Satay Village,satay,thai,17:30:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,2,12 High St.,Fine dining Thai-style. Wide selection of vegetarian entrées. We also deliver.
+Cancun,cancun,mexican,11:30:00,23:00:00,"Mo,Tu,We,Th,Fr",3,3,2030 Maple Rd.,"Tacos, tortas, burritos, just the way you like them. Our hot sauce and guacamole are the best in town."
+Curry Up,curryup,indian,17:00:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,5,455 University,Indian food with a modern twist. We use all-natural ingredients and the finest spices to delight and tempt your palate.
+Carthage,carthage,african,17:00:00,22:30:00,"Tu,We,Th,Fr,Sa,Su",2,1,59 Court Terrace,Wholesome food and all the rich flavor of Africa. Try our famous lentil soup.
+Burgerama,burgerama,american,11:00:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa",5,4,456 University,"Grade A beef, freshly ground every day, hand-cut fries, and home-made milkshakes. We make the best burgers in town. "
+Three Little Pigs,littlepigs,barbecue,11:30:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,12 Summer Court,Genuine East Texas barbecue. Accept no substitutes! 
+Little Prague,littleprague,czech/slovak,11:00:00,22:00:00,"Mo,We,Fr,Sa,Su",4,3,44 Park Ave,We're famous for our housemade sausage and desserts. Come taste real European cooking.
+Kohl Haus,kohlhaus,german,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,3421 Queen-Mary Rd,"East German specialties, in a family-friendly setting. Come warm up with our delicious soups."
+Dragon's Tail,dragon,chinese,17:00:00,2:00:00,"Mo,Tu,We,Th,Fr",1,4,8 Jasmine Rd.,Take-out or dine-in Chinese food. Open late. Delivery available
+Hit Me Baby One More Thai,babythai,thai,15:00:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,5,12 Jasmine Rd.,"Thai food with a youthful bar scene. Try our tropical inspired cocktails, or tuck into a plate of our famous pad thai."
+The Whole Tamale,wholetamale,mexican,10:30:00,21:30:00,"Tu,We,Th,Fr,Sa,Su",2,4,401 University,The tamale and hot sauce experts. Tamale special changes daily.
+Birmingham Bhangra,bhangra,indian,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",4,2,992 Riddick St.,"Curry with a metropolitan twist. Daily specials. Dine-in or takeaway, you choose."
+Taqueria,taqueria,mexican,11:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,3,12 North Circle Dr.,Taqueria y panaderia. Birria served on weekends.
+Pedro's,pedros,mexican,17:30:00,22:00:00,"Mo,We,Fr,Sa,Su",4,5,5521 Alameda,Pedro's has been an Alameda staple for thirty years. Our list of fine tequilas and slow-cooked carnitas will make you a regular.
+Super Wonton Express,superwonton,chinese,11:30:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",2,1,223 Milliways Ave,"Soups, stir-fries, and more. We cook fast."
+Naan Sequitur,naansequitur,indian,17:00:00,22:00:00,"Mo,Tu,We,Th,Fr",5,4,"Unit 12, Olde Towne Mall","Naan and tandoori specialties, from our clay oven. "
+Sakura,sakura,japanese,17:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",3,2,"Unit 18, Olde Towne Mall","Sushi specials daily. We serve fast, friendly, fresh Japanese cuisine."
+Shandong Lu,shandong,chinese,17:00:00,22:30:00,"Tu,We,Th,Fr,Sa,Su",4,3,335 University,Szechuan and Mandarin specialities with a fine dining ambiance. Our hot and sour soup is the best in town.
+Curry Galore,currygalore,indian,11:00:00,22:30:00,"Mo,Tu,We,Th,Fr,Sa",3,2,56 Park Ave,"Famous North Indian home cooking. Spicy or mild, as you like it. Delivery available."
+North by Northwest,north,cafe,6:00:00,18:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",1,4,201 University,Great coffee and snacks. Free wifi. 
+Full of Beans,beans,cafe,6:30:00,20:30:00,"Mo,We,Fr,Sa,Su",3,5,498 College Ave.,We roast on premises to give you the best cup of coffee in town. 
+Tropical Jeeve's Cafe,jeeves,cafe,7:00:00,14:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",2,4,550 Milliways Ave,"Hawaiian style coffee, fresh juices, and tropical fruit smoothies."
+Zardoz Cafe,zardoz,cafe,10:30:00,0:00:00,"Mo,Tu,We,Th,Fr",4,2,6202 Alameda,Coffee bar and sci-fi bookshop. Come in for an espresso or a slice of our famous pie.
+Angular Pizza,angular,pizza,6:00:00,0:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",1,5,2232 King St.,Home of the superheroic pizza! 
+Flavia,flavia,pizza,11:30:00,22:00:00,"Tu,We,Th,Fr,Sa,Su",4,5,401 Riddick St.,"Roman-style pizza -- square, the way the gods intended."
+Luigi's House of Pies,luigis,pizza,16:30:00,23:00:00,"Mo,Tu,We,Th,Fr,Sa",2,1,5 Garcia Ave.,Our secret pizza sauce makes our pizza better. We specialize in large groups.
+Thick and Thin,thick,pizza,17:00:00,23:30:00,"Mo,Tu,We,Th,Fr,Sa,Su",5,4,832 Dominican Ave.,"Whether you're craving Chicago-style deep dish or thin as a wafer crust, we have you covered in toppings you'll love."
+When in Rome,wheninrome,pizza,11:00:00,21:30:00,"Mo,We,Fr,Sa,Su",3,2,234 Valencia St.,Authentic Italian pizza in a friendly neighborhood joint.
+Pizza 76,pizza76,pizza,10:30:00,22:00:00,"Mo,Tu,We,Th,Fr,Sa,Su",4,3,76 Market St.,Wood-fired pizza with daily ingredients fresh from our farmer's market. We make our own mozzarella in house.

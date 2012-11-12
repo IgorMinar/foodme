@@ -1,0 +1,241 @@
+Cuisine,Item Name,Price
+african,Dibi Lamb,8.25
+african,Doro Wat,5.95
+african,Grilled Chicken,4.95
+african,Grilled Fish,6.95
+african,Grilled Plantains in Spicy Peanut Sauce,7.95
+african,Lamb Mafe (Peanut Butter Stew),8.75
+african,Meat Pie,6
+african,Mechoui with Plantains,5.95
+african,Pepper Soup,9.95
+african,Piri-Piri Shrimp,11.45
+african,Suppa Kandja,3.95
+african,Thiou Boulette,6.95
+african,Thiou Curry with Chicken,7.95
+african,Thu Okra,6.95
+african,Yassa Chicken,8.95
+african,Yassa Lamb,8.25
+american,Buffalo wings,5.95
+american,California-style baked Tilapia with rice,6.95
+american,Cheeseburger and fries,4.55
+american,Cherry pie a la mode,4.95
+american,Chocolate milkshake,6.95
+american,Cobb salad,4.95
+american,Famous BLT on a kaiser roll with fries,4.95
+american,Firehouse chili,6.95
+american,Goat cheese and eggplant wrap (vegetarian),5.95
+american,Greek salad,6.95
+american,Grilled chicken sandwich,4.95
+american,Grilled sausage on a bun,6.95
+american,Housemade pot roast with seasonal vegetable,16.95
+american,Roast beef dip,11.45
+american,Roast chicken and mashed potatoes,7.55
+american,Soup of the day,8.95
+american,Spaghetti and meatballs,11.45
+barbecue,BBQ chicken,4.95
+barbecue,Beef ribs (full),9.95
+barbecue,Beef ribs (delux),10.45
+barbecue,Beef ribs (half),6.45
+barbecue,Beer,7.55
+barbecue,Coleslaw,8.95
+barbecue,Collards,9.95
+barbecue,Cornbread,11.45
+barbecue,Devilled eggs,4
+barbecue,German chocolate cake,5.95
+barbecue,Housemade chips,4
+barbecue,Hushpuppies,3.25
+barbecue,Mac and cheese,6
+barbecue,Pork ribs (half),6.95
+barbecue,Potato salad,3.95
+barbecue,Pulled pork sandwich on a soft roll,4.95
+barbecue,Riblets,10.45
+cafe,Apple pie,5.95
+cafe,B.L.T. and Avocado Sandwich,5.95
+cafe,Caesar salad,5.95
+cafe,Cappucino,3.95
+cafe,Cherry cheesecake,4.95
+cafe,Chocolate chip cookie,4.55
+cafe,Cobb salad,6.95
+cafe,Drip coffee,5.95
+cafe,Eggsalad Sandwich,3.95
+cafe,Espresso,6.95
+cafe,Greek salad,3.95
+cafe,Hot tea,2.5
+cafe,Iced tea,2.5
+cafe,Latte,4
+cafe,Mango and banana smoothie,3
+cafe,Orange juice,4.95
+cafe,Quiche of the day,6.95
+cafe,Turkey Sandwich,7.55
+chinese,Almond cookie,5.95
+chinese,Chicken and broccoli,9.95
+chinese,Chow mein,4.95
+chinese,Egg rolls (4),3.95
+chinese,General Tao's chicken,5.95
+chinese,Hot and Sour Soup,7.55
+chinese,Hunan dumplings,6.5
+chinese,Mongolian beef,6.95
+chinese,Pan-fried beef noodle,7.95
+chinese,Pea shoots with garlic,8.95
+chinese,Potstickers (6),6.95
+chinese,Seafood hotpot,4.95
+chinese,Steamed rice,5.95
+chinese,Sweet and sour pork,6.95
+chinese,Walnut prawns,4.95
+chinese,Wonton Soup,6.25
+chinese,Young Chow fried rice,6.45
+czech/slovak,Apple strudel,6.95
+czech/slovak,Apricot dumpling with yogurt topping ,3.95
+czech/slovak,Balkánský Salad,3.95
+czech/slovak,Beef goulash,8.95
+czech/slovak,Chicken breast fillet schnitzel ,10.45
+czech/slovak,Cucumber Salad,7.55
+czech/slovak,Dumplings,5.95
+czech/slovak,Fried goose liver with onion and bread,7.55
+czech/slovak,Halusky with sauerkraut and belly bacon ,9.95
+czech/slovak,Lentil soup,4.5
+czech/slovak,Pickles with cabbage and cheddar,10.45
+czech/slovak,Pork schnitzel,3.95
+czech/slovak,Potato pancake with bacon,5.95
+czech/slovak,Potato Salad,4.55
+czech/slovak,Segedínský gulash and dumplings,6.95
+czech/slovak,Sour cabbage soup,10.45
+french,bavette dans son jus,4.95
+french,bœuf bourguignon ,18
+french,bouillabaisse,17.5
+french,coq au vin,10.45
+french,frites aïoli ,
+french,moules et frites,3.95
+french,poulet au riesling,4.95
+french,quiche lorraine,7.95
+french,salade de chèvre chaud,5.95
+french,salade du midi,6.95
+french,salade niçoise,3.95
+french,sandwich croque-madame,3.95
+french,sandwich croque-monsieur,4.55
+french,soupe à l'oignon,9.95
+french,steak frites,5.95
+french,tarte pissaladière ,6.95
+french,tarte tatin,5.95
+german,Bockwurst Würstchen,4.95
+german,Bratwurst mit Brötchen und Sauerkraut,5.95
+german,Currywurst mit Brötchen,5.95
+german,Das Hausmannskost,11.45
+german,Fleishkas mit Kartoffelsalat,6.95
+german,Frankfurter Würstchen,9.95
+german,Französische Zwiebelsuppe mit Käse,10.45
+german,Frikadelle mit Brötchen,6.95
+german,Gebackener Camenbert,7.55
+german,Gemischter Salat,4.55
+german,Haus Salatteller,11.45
+german,Jaegerschnitzel,9.95
+german,Kaesepaetzle,6.95
+german,Kartoffel Reibekuchen mit Apfelmus,5.95
+german,Maultaschen mit Käse,7.95
+german,Sauerbraten,10.45
+german,Ungarische Gulaschsuppe mit Brötchen,3.95
+german,Wienerschnitzel,8.95
+german,Wurstsalad mit Bauernbrot,6.95
+indian,Aloo Gobi,5.95
+indian,Basmati rice,6.95
+indian,Butter Chicken,5.95
+indian,Chicken Korma,7.55
+indian,Chicken Tikka Masala,5.95
+indian,Gulab Jamun,8.95
+indian,Kheer,4.5
+indian,Lamb Asparagus,9.5
+indian,Lamb Vindaloo,7.95
+indian,Mix Grill Bombay,5.95
+indian,Mulligatawny soup,5.95
+indian,Murgh Chicken,3.95
+indian,Naan stuffed with spinach and lamb,4.55
+indian,Plain naan,5.95
+indian,Rogan Josh,5.95
+indian,Saag Paneer,5.95
+indian,Tandoori Chicken,4.95
+japanese,California roll,5.95
+japanese,Chicken teriyaki,5.95
+japanese,Edamame,6.95
+japanese,Futomaki roll,
+japanese,Green tea ice cream,6.95
+japanese,Kitsune Udon,9.5
+japanese,Miso soup,5.95
+japanese,Pork Katsu,5.95
+japanese,Salmon teriyaki,5.95
+japanese,Sashimi combo,6.95
+japanese,Spicy Yellowtail roll,7.55
+japanese,Sushi combo,4.55
+japanese,Teppa Maki,5.95
+japanese,Unagi Don,7.55
+japanese,Vegetable tempura,3.95
+japanese,Vegetarian sushi plate,6.95
+japanese,Wakame salad,4.95
+mexican,Beans and rice,7.95
+mexican,Beef burrito,6.95
+mexican,Birria,7.95
+mexican,Chicken burrito,11.45
+mexican,Chicken mole platter,5.95
+mexican,Chile relleno (meat),6.95
+mexican,Chile relleno (vegetarian),3.95
+mexican,Chips and guacamole,5.95
+mexican,Enchiladas,4.55
+mexican,Flan,7.95
+mexican,Jamaica Aqua Fresca,2.5
+mexican,Pork al pastor platter,5.95
+mexican,Sopa de albondigas,7.95
+mexican,Sopa de pollo,6.95
+mexican,Strawberry Aqua Fresca,3.95
+mexican,Super nachos with carne asada,5.95
+mexican,Tacos de la casa (3),4.95
+mexican,Vegetarian platter,4.55
+pizza,Cesar salad,5.95
+pizza,Cheesecake,6.95
+pizza,Chicago-style deep dish chicken and spinach,6.95
+pizza,Chicago-style deep dish pepperoni and cheese,7.95
+pizza,Chicago-style deep dish vegetarian,6.95
+pizza,Chicago-style meat lover's,8.95
+pizza,Chocolate cake,3.95
+pizza,Coffee,7.95
+pizza,Garlic bread,
+pizza,Greek salad,5.95
+pizza,Pizza of the day (slice),7.55
+pizza,Thin crust anchovy and garlic and chili pepper,5.95
+pizza,"Thin crust broccoli, chicken, and mozarella",3.95
+pizza,Thin crust margherita,4.55
+pizza,Thin crust pepperoni,6.95
+pizza,Thin crust quattro stagione,4.95
+pizza,Thin crust sausage and guanciale bacon,4.95
+thai,Basil duck with rice,4.55
+thai,Curry salmon,12.45
+thai,Egg rolls (4),5.95
+thai,Fried banana and ice cream,11.45
+thai,Green curry with chicken,3.95
+thai,Green curry with pork,4.55
+thai,Hot tea,2.5
+thai,Onion pancake,6.95
+thai,Pad See Ew,4.95
+thai,Pad Thai,6.95
+thai,Pumpkin curry,6.95
+thai,Red curry with chicken,8.95
+thai,Red curry with pork,9.95
+thai,Sticky rice with mango,6.95
+thai,Thai iced coffee,6.95
+thai,Thai iced tea,3.95
+thai,Tofu salad rolls,10.45
+vegetarian,bean and cheese burrito,6.95
+vegetarian,cheese tortellini in tomato sauce,3.95
+vegetarian,coffee,6.95
+vegetarian,falafel wrap with tabbouleh,4.95
+vegetarian,flourless chocolate cake,8.95
+vegetarian,garden fresh salad,6.5
+vegetarian,happy buddha stir fry,10.45
+vegetarian,hummus appetizer plate,8
+vegetarian,lentil burger,6
+vegetarian,lentil soup,4.5
+vegetarian,pasta with olives and marinated lemon,6.95
+vegetarian,spinach and cheese wrap,5.95
+vegetarian,tea,5.95
+vegetarian,toasted sandwich with grilled eggplant,8.95
+vegetarian,tofu chicken wrap,9.95
+vegetarian,tomato and cheese sandwich,11.45
+vegetarian,vegetable stew,5.95
