@@ -29,8 +29,29 @@ foodMeApp.controller('RestaurantsController',
         return;
       }
 
+      if (filter.cuisine.length && filter.cuisine.indexOf(item.cuisine) === -1) {
+        return;
+      }
+
       $scope.restaurants.push(item);
     });
+  };
+
+
+  $scope.CUISINE_OPTIONS = {
+    african: 'African',
+    american: 'American',
+    barbecue: 'Barbecue',
+    cafe: 'Cafe',
+    chinese: 'Chinese',
+    'czech/slovak': 'Czech / Slovak',
+    german: 'German',
+    indian: 'Indian',
+    japanese: 'Japanese',
+    mexican: 'Mexican',
+    pizza: 'Pizza',
+    thai: 'Thai',
+    vegetarian: 'Vegetarian'
   };
 
 });
