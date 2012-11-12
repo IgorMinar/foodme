@@ -10,26 +10,12 @@
 
       <h5>Rating</h5>
 
-      <ul class="fm-rating pointer">
-        <li class="fm-selected">★</li>
-        <li class="fm-selected">★</li>
-        <li class="fm-selected">★</li>
-        <li>★</li>
-        <li>★</li>
-      </ul>
-      <a ng-hide="disabled" ng-click="clear()" href="" style="">clear</a>
+      <fm-rating ng-model="$parent.filter.rating"></fm-rating>
 
 
       <h5>Price</h5>
 
-      <ul class="fm-rating">
-        <li class="fm-selected">$</li>
-        <li class="fm-selected">$</li>
-        <li>$</li>
-        <li>$</li>
-        <li>$</li>
-      </ul>
-      <a ng-hide="disabled" ng-click="clear()" href="" style="">clear</a>
+      <fm-rating ng-model="$parent.filter.price" symbol="$"></fm-rating>
 
 
       <h5>Cuisine</h5>
@@ -99,10 +85,10 @@
           <p>{{restaurant.description}}</p>
         </td>
         <td>
-          {{restaurant.rating | stars}}
+          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
         </td>
         <td>
-          {{restaurant.price | dollars}}
+          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true" ></fm-rating>
         </td>
       </tr>
     </table>

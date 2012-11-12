@@ -15,8 +15,8 @@
         <div class="span2">
           <div>{{restaurant.address}}</div>
 
-          <div>{{restaurant.rating | stars}}</div>
-          <div>{{restaurant.price | dollars}}</div>
+          <fm-rating ng-model="$parent.restaurant.rating" readonly="true"></fm-rating>
+          <fm-rating ng-model="$parent.restaurant.price" symbol="$" readonly="true"></fm-rating>
 
         </div>
         <div class="span4">
