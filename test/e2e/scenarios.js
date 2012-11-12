@@ -8,25 +8,24 @@ describe('foodme', function() {
     browser().navigateTo('/index.html');
   });
 
-  it('should read customer information and alert when button is clicked', function() {
-    var alertText;
-
+  it('should persist customer information', function() {
     input('customerName').enter('Customer');
     input('customerAddress').enter('Address');
 
-    this.addFutureAction('mock alert()', function(window, document, done) {
-      window.alert = function(text) { alertText = text; };
-      done();
-    });
-
     element(':button.btn-primary').click();
 
-    expect(this.addFutureAction('alert text', function(window, decoment, done){
-      done(null, alertText);
-    })).toEqual('Customer - Address');
+    //reload the page
+    browser().navigateTo('/index.html#/');
+
+    expect(input('customerName').val()).toEqual('Customer');
+    expect(input('customerAddress').val()).toEqual('Address');
   });
 
+
   it('should disable form submission button when empty', function() {
+    input('customerName').enter('');
+    input('customerAddress').enter('');
+
     expect(element(':button.btn-primary:disabled').count()).toEqual(1);
   });
 });
