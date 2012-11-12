@@ -1,4 +1,35 @@
 /****************************************
+ * general purpose css-only components  *
+ ****************************************/
+
+.fm-panel {
+  background-color: #fff;
+
+  border: 1px solid black;
+
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+
+  margin-bottom: 20px;
+  padding: 10px 10px 20px 10px;
+
+  overflow: hidden;
+}
+
+.fm-panel > h4 {
+  background-color: #E5E5E5;
+  margin: -10px -10px 10px -10px;
+  padding: 10px 10px 10px 10px;
+}
+
+
+
+/****************************************
  * route specific css                   *
  ****************************************/
 
