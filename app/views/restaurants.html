@@ -1,1 +1,153 @@
-PLACEHOLDER RESTAURANTS TEMPLATE
+<div class="breadcrumb fm-deliver-to">
+  Deliver to: Placeholder street 23, Town of Placeholder, 98765
+  <a href="#/customer" class="pull-right">Change</a>
+</div>
+
+
+<div class="row-fluid">
+
+  <div class="span3 fm-panel">
+    <h4>Filter Restaurants</h4>
+
+    <form>
+
+      <h5>Rating</h5>
+
+      <ul class="fm-rating pointer">
+        <li class="fm-selected">★</li>
+        <li class="fm-selected">★</li>
+        <li class="fm-selected">★</li>
+        <li>★</li>
+        <li>★</li>
+      </ul>
+      <a ng-hide="disabled" ng-click="clear()" href="" style="">clear</a>
+
+
+      <h5>Price</h5>
+
+      <ul class="fm-rating">
+        <li class="fm-selected">$</li>
+        <li class="fm-selected">$</li>
+        <li>$</li>
+        <li>$</li>
+        <li>$</li>
+      </ul>
+      <a ng-hide="disabled" ng-click="clear()" href="" style="">clear</a>
+
+
+      <h5>Cuisine</h5>
+
+      <div fm-checkbox-list ng-model="filter.cuisine">
+        <label ng-repeat="(name, title) in CUISINE_OPTIONS" class="checkbox">
+          <input type="checkbox" value="{{name}}"> {{title}}
+        </label>
+      </div>
+
+      <div>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> African
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Barbecue
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Cafe
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Czech / Slovak
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> German
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Indian
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Japanese
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Mexican
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Pizza
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Thai
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" value="african"> Vegetarian
+        </label>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="span9 fm-panel fm-restaurant-list">
+    <h4>
+      2 restaurants found!
+    </h4>
+
+    <table class="table table-hover table-striped">
+      <tr>
+        <th><a href>Name &#9650;</a></th>
+        <th><a href>Price </a></th>
+        <th><a href>Rating </a></th>
+      </tr>
+      <tr>
+        <td>
+          <a href="#/menu/angular">
+            <img class="img-rounded pull-left" src="img/restaurants/angular.jpg">
+            <b>Angular Pizza</b>
+          </a>
+          <p>Home of the superheroic pizza! </p>
+        </td>
+        <td>
+          <ul class="fm-rating pointer">
+            <li class="fm-selected">★</li>
+            <li class="fm-selected">★</li>
+            <li class="fm-selected">★</li>
+            <li>★</li>
+            <li>★</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="fm-rating">
+            <li class="fm-selected">$</li>
+            <li class="fm-selected">$</li>
+            <li>$</li>
+            <li>$</li>
+            <li>$</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="#/menu/tofuparadise">
+            <img class="img-rounded pull-left" src="img/restaurants/tofuparadise.jpg">
+            <b>BBQ Tofu Paradise</b>
+          </a>
+          <p>Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers.</p>
+        </td>
+
+        <td>
+          <ul class="fm-rating pointer">
+            <li class="fm-selected">★</li>
+            <li class="fm-selected">★</li>
+            <li class="fm-selected">★</li>
+            <li>★</li>
+            <li>★</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="fm-rating">
+            <li class="fm-selected">$</li>
+            <li class="fm-selected">$</li>
+            <li>$</li>
+            <li>$</li>
+            <li>$</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
