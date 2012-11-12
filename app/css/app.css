@@ -122,3 +122,79 @@ fm-rating:hover a {
   width: 100px;
   height: 100px;
 }
+
+
+/* menu */
+
+.fm-restaurant  {
+  margin-bottom: 20px;
+}
+
+.fm-restaurant h3 {
+  margin-top: 0;
+}
+
+.fm-restaurant img {
+  width: 150px;
+  height: 150px;
+}
+
+.fm-restaurant .fm-rating {
+  display: block;
+}
+
+.fm-menu-list li {
+  list-style-type: none;
+}
+
+.fm-menu-list li span {
+  padding-right: 20px;
+}
+
+.fm-menu-list a {
+  color: inherit;
+}
+
+.fm-menu-list a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.fm-menu-list .icon-plus-sign {
+  visibility: hidden;
+}
+
+.fm-menu-list li:hover .icon-plus-sign {
+  visibility: visible;
+}
+
+.fm-menu-list li:hover {
+  color: black;
+}
+
+.fm-menu-list ul li {
+  text-align: center;
+}
+
+.fm-cart li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.fm-cart .icon-remove-sign {
+  visibility: hidden;
+}
+
+.fm-cart li:hover .icon-remove-sign {
+  visibility: visible;
+}
+
+.fm-cart form {
+  padding-left: 2px;
+}
+
+.fm-cart p {
+  padding-left: 20px;
+  padding-top: 5px;
+}
