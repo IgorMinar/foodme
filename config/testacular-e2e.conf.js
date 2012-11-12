@@ -20,3 +20,6 @@ junitReporter = {
   outputFile: 'test_out/e2e.xml',
   suite: 'e2e'
 };
+
+port = 9877;
+runnerPort = 9101;
