@@ -99,10 +99,10 @@
           <p>{{restaurant.description}}</p>
         </td>
         <td>
-          {{restaurant.rating}}
+          {{restaurant.rating | stars}}
         </td>
         <td>
-          {{restaurant.price}}
+          {{restaurant.price | dollars}}
         </td>
       </tr>
     </table>
