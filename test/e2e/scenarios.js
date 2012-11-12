@@ -22,4 +22,8 @@ describe('foodme', function() {
       done(null, alertText);
     })).toEqual('Customer - Address');
   });
+
+  it('should disable form submission button when empty', function() {
+    expect(element(":button.btn-primary:disabled").count()).toEqual(1);
+  });
 });
