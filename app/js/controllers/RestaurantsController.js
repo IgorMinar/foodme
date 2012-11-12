@@ -1,14 +1,12 @@
 'use strict';
 
 foodMeApp.controller('RestaurantsController',
-    function RestaurantsController($scope, customer, $location, $http) {
+    function RestaurantsController($scope, customer, $location, Restaurant) {
 
   if (!customer.address) {
     $location.url('/customer');
   }
 
-  $http.get('/api/restaurant').then(function(response) {
-    $scope.restaurants = response.data;
-  });
+  $scope.restaurants = Restaurant.query();
 
 });
