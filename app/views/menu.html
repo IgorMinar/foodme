@@ -15,8 +15,8 @@
         <div class="span2">
           <div>{{restaurant.address}}</div>
 
-          <div>Rating: {{restaurant.rating}}</div>
-          <div>Price: {{restaurant.price}}</div>
+          <div>{{restaurant.rating | stars}}</div>
+          <div>{{restaurant.price | dollars}}</div>
 
         </div>
         <div class="span4">
