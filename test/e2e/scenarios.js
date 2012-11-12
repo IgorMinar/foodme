@@ -13,17 +13,18 @@ describe('foodme', function() {
 
     input('customerName').enter('Customer');
     input('address').enter('Address');
-    this.addFutureAction('mack alert()', function(window, document, done) {
-      window.alert = function(text) { alertText = text; };
-      done();
-    });
     element(':button.btn-primary').click();
-    expect(this.addFutureAction('alert text', function(window, decoment, done){
-      done(null, alertText);
-    })).toEqual('Customer - Address');
+
+    browser().navigateTo('/index.html#/');
+
+    expect(input('customerName').val()).toEqual('Customer');
+    expect(input('address').val()).toEqual('Address');
   });
 
   it('should disable form submission button when empty', function() {
+    input('customerName').enter('');
+    input('address').enter('');
+
     expect(element(":button.btn-primary:disabled").count()).toEqual(1);
   });
 });
