@@ -9,31 +9,18 @@
     </div>
 
     <div class="span10">
-      <h3>Angular Pizza</h3>
+      <h3>{{restaurant.name}}</h3>
 
       <div class="row">
         <div class="span2">
-          <div>2232 King St.</div>
+          <div>{{restaurant.address}}</div>
 
-          <ul class="fm-rating">
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-          </ul>
-
-          <ul class="fm-rating">
-            <li class="fm-selected">$</li>
-            <li>$</li>
-            <li>$</li>
-            <li>$</li>
-            <li>$</li>
-          </ul>
+          <div>Rating: {{restaurant.rating}}</div>
+          <div>Price: {{restaurant.price}}</div>
 
         </div>
         <div class="span4">
-          <div>Home of the superheroic pizza!</div>
+          <div>{{restaurant.description}}</div>
         </div>
       </div>
     </div>
@@ -48,73 +35,9 @@
 
 
     <ul>
-      <li>
-        <span>Cesar salad</span>
-        <a href>5.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Cheesecake</span>
-        <a href>6.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Chicago-style deep dish chicken and spinach</span>
-        <a href>6.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Chicago-style deep dish pepperoni and cheese</span>
-        <a href>7.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Chicago-style deep dish vegetarian</span>
-        <a href>6.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Chicago-style meat lover's</span>
-        <a href>8.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Chocolate cake</span>
-        <a href>3.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Coffee</span>
-        <a href>7.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Garlic bread</span>
-        <a href><i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Greek salad</span>
-        <a href>5.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Pizza of the day (slice)</span>
-        <a href>7.55 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust anchovy and garlic and chili pepper</span>
-        <a href>5.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust broccoli, chicken, and mozarella</span>
-        <a href>3.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust margherita</span>
-        <a href>4.55 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust pepperoni</span>
-        <a href>6.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust quattro stagione</span>
-        <a href>4.95 <i class="icon-plus-sign"></i></a>
-      </li>
-      <li>
-        <span>Thin crust sausage and guanciale bacon</span>
-        <a href>4.95 <i class="icon-plus-sign"></i></a>
+      <li ng-repeat="menuItem in restaurant.menuItems">
+        <span>{{menuItem.name}}</span>
+        <a href>{{menuItem.price}} <i class="icon-plus-sign"></i></a>
       </li>
     </ul>
 
