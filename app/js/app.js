@@ -1,6 +1,6 @@
 'use strict';
 
-var foodMeApp = angular.module('foodMeApp', []);
+var foodMeApp = angular.module('foodMeApp', ['ngResource']);
 
 foodMeApp.config(function($routeProvider) {
 
