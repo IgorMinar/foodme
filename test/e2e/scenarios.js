@@ -6,7 +6,7 @@ describe('foodme', function() {
 
   describe('customer', function() {
     beforeEach(function() {
-      browser().navigateTo('/index.html');
+      browser().navigateTo('/index.html#/customer');
     });
 
     it('should read delivery information', function() {
@@ -16,7 +16,7 @@ describe('foodme', function() {
       input('address').enter('Address');
       element(':button.btn-primary').click();
 
-      browser().navigateTo('/index.html#/');
+      browser().navigateTo('/index.html#/customer');
 
       expect(input('customerName').val()).toEqual('Customer');
       expect(input('address').val()).toEqual('Address');
