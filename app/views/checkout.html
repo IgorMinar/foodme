@@ -5,15 +5,16 @@
     <div class="row">
       <div class="span6">
         <h5>Deliver To:</h5>
-        <div>PLACEHOLDER NAME</div>
-        <div>PLACEHOLDER ADDRESS</div>
+        <div>{{customer.name}}</div>
+        <div>{{customer.address}}</div>
         <a href="#/customer">Change</a>
       </div>
       <div class="span6">
         <h5>Payment:</h5>
         <div class="control-group">
           <select name="ccType" class="input-medium"
-                  required>
+                  required
+                  ng-model="cart.payment.type">
             <option value="visa">Visa</option>
             <option value="mc">MasterCard</option>
             <option value="amex">Amex</option>
@@ -24,16 +25,20 @@
           <input type="text" name="ccNum"
                  placeholder="Card number"
                  maxlength="16"
-                 required>
+                 required ng-pattern="/\d{16}/"
+                 ng-model="cart.payment.number">
         </div>
         <span class="control-group">
           <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium"
-                 required maxlength="16">
+                 maxlength="16"
+                 required ng-pattern="/\d\d\/\d\d\d\d/"
+                 ng-model="cart.payment.expire">
         </span>
         <span class="control-group">
           <input type="text" name="ccCvc" placeholder="CVC" class="input-small"
                  maxlength="4"
-                 required>
+                 required ng-pattern="/\d{3,4}/"
+                 ng-model="cart.payment.cvc">
         </span>
       </div>
     </div>
@@ -47,33 +52,28 @@
           <th>Subtotal</th>
           <th></th>
         </tr>
-        <tr>
-          <td><input type="number" value="2"></td>
-          <td>California roll</td>
-          <td>$10.50</td>
-          <td>$21.00</td>
-          <td><a href><i class="icon-remove-sign"></i></a></td>
-        </tr>
-        <tr>
-          <td><input type="number" value="1"></td>
-          <td>Spicy Yellowtail roll</td>
-          <td>$7.55</td>
-          <td>$7.55</td>
-          <td><a href><i class="icon-remove-sign"></i></a></td>
+        <tr ng-repeat="item in cart.items">
+          <td><input type="number" ng-model="item.qty"></td>
+          <td>{{item.name}}</td>
+          <td>{{item.price | currency}}</td>
+          <td>{{item.price * item.qty | currency}}</td>
+          <td><a href ng-click="cart.remove(item)"><i class="icon-remove-sign"></i></a></td>
         </tr>
         <tr>
           <th></th>
           <th></th>
           <th>Total:</th>
-          <th>$28.55</th>
+          <th>{{ cart.total() | currency }}</th>
           <th></th>
         </tr>
       </table>
 
       <div class="fm-right">
-        <a href="#/menu/restaurantId" class="btn">Back to Menu</a>
-        <a href class="btn btn-danger">Clear Cart</a>
-        <button class="btn btn-primary">Purchase</button>
+        <a href="#/menu/{{restaurantId}}" class="btn">Back to Menu</a>
+        <a href class="btn btn-danger" ng-click="cart.reset()">Clear Cart</a>
+        <button class="btn btn-primary"
+                ng-disabled="form.$invalid || !cart.items.length || submitting"
+                ng-click="purchase()">Purchase</button>
       </div>
     </div>
   </div>
