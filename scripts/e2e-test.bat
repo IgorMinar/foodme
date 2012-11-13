@@ -1,7 +1,8 @@
 @echo off
 
 REM Windows script for running e2e tests
-REM You have to run server and capture some browser first
+REM Make sure you run web server first by
+REM   ./scripts/web-server.bat
 REM
 REM Requirements:
 REM - NodeJS (http://nodejs.org/)
