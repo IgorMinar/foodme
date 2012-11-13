@@ -29,7 +29,7 @@
   <div class="fm-customer-bkg img-rounded">
   </div>
 
-  <form class="form-horizontal">
+  <form class="form-horizontal" ng-controller="CustomerController">
     <div class="modal">
       <div class="modal-header">
         <h3>Get Started</h3>
@@ -41,7 +41,8 @@
           <div class="controls">
             <input type="text" id="customerName" placeholder="Joe Black"
                    class="input-medium"
-                   required>
+                   required
+                   ng-model="customerName">
           </div>
         </div>
 
@@ -50,13 +51,15 @@
           <div class="controls">
             <input type="text" id="address" placeholder="432 Wiggly Rd, Mountain View, 94043"
                    class="input-xlarge"
-                   required>
+                   required
+                   ng-model="customerAddress">
           </div>
         </div>
 
       </div>
       <div class="modal-footer">
-        <button class="btn btn-primary">Find Restaurants!</button>
+        <button class="btn btn-primary"
+                ng-click="findRestaurants(customerName, customerAddress)">Find Restaurants!</button>
       </div>
     </div>
   </form>
@@ -68,6 +71,7 @@
 -->
 <script src="lib/angular/angular.js"></script>
 <script src="js/app.js"></script>
+<script src="js/controllers/CustomerController.js"></script>
 
 </body>
 </html>
