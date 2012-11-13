@@ -84,7 +84,11 @@
 
   <div class="span9 fm-panel fm-restaurant-list">
     <h4>
-      {{restaurants.length}} restaurants found!
+      <ng-pluralize count="restaurants.length"
+                    when="{'0'    : 'No restaurants found. :-(',
+                           'one'  : '1 restaurant found!',
+                           'other': '{} restaurants found!'}">
+      </ng-pluralize>
     </h4>
 
     <table class="table table-hover table-striped">
