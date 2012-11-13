@@ -1,0 +1,80 @@
+<form name="form">
+  <div class="container fm-panel fm-checkout">
+    <h4>Menu</h4>
+
+    <div class="row">
+      <div class="span6">
+        <h5>Deliver To:</h5>
+        <div>PLACEHOLDER NAME</div>
+        <div>PLACEHOLDER ADDRESS</div>
+        <a href="#/customer">Change</a>
+      </div>
+      <div class="span6">
+        <h5>Payment:</h5>
+        <div class="control-group">
+          <select name="ccType" class="input-medium"
+                  required>
+            <option value="visa">Visa</option>
+            <option value="mc">MasterCard</option>
+            <option value="amex">Amex</option>
+            <option value="discover">Discover</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <input type="text" name="ccNum"
+                 placeholder="Card number"
+                 maxlength="16"
+                 required>
+        </div>
+        <span class="control-group">
+          <input type="text" name="ccExp" placeholder="mm/yyyy" class="input-medium"
+                 required maxlength="16">
+        </span>
+        <span class="control-group">
+          <input type="text" name="ccCvc" placeholder="CVC" class="input-small"
+                 maxlength="4"
+                 required>
+        </span>
+      </div>
+    </div>
+
+    <div>
+      <table class="table table-hover table-striped">
+        <tr>
+          <th>Qty</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><input type="number" value="2"></td>
+          <td>California roll</td>
+          <td>$10.50</td>
+          <td>$21.00</td>
+          <td><a href><i class="icon-remove-sign"></i></a></td>
+        </tr>
+        <tr>
+          <td><input type="number" value="1"></td>
+          <td>Spicy Yellowtail roll</td>
+          <td>$7.55</td>
+          <td>$7.55</td>
+          <td><a href><i class="icon-remove-sign"></i></a></td>
+        </tr>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Total:</th>
+          <th>$28.55</th>
+          <th></th>
+        </tr>
+      </table>
+
+      <div class="fm-right">
+        <a href="#/menu/restaurantId" class="btn">Back to Menu</a>
+        <a href class="btn btn-danger">Clear Cart</a>
+        <button class="btn btn-primary">Purchase</button>
+      </div>
+    </div>
+  </div>
+</form>
