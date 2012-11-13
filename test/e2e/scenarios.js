@@ -29,5 +29,26 @@ describe('foodme', function() {
 
       expect(element(':button.btn-primary:disabled').count()).toEqual(1);
     });
+
+  });
+
+
+  describe('static routes', function() {
+    it('should navigate to who we are', function() {
+      browser().navigateTo('/index.html#/who-we-are');
+      expect(element('ng-view').text()).
+          toContain('We are purple unicorns jockeys and knitters of woolen socks');
+    });
+
+    it('should navigate to how it works', function() {
+      browser().navigateTo('/index.html#/how-it-works');
+      expect(element('ng-view').text()).toContain('It\'s simple:');
+    });
+
+    it('should navigate to help', function() {
+      browser().navigateTo('/index.html#/help');
+      expect(element('ng-view').text()).
+          toContain('Until how late do you deliver');
+    });
   });
 });
