@@ -84,7 +84,7 @@
 
   <div class="span9 fm-panel fm-restaurant-list">
     <h4>
-      2 restaurants found!
+      {{restaurants.length}} restaurants found!
     </h4>
 
     <table class="table table-hover table-striped">
@@ -93,59 +93,19 @@
         <th><a href>Price </a></th>
         <th><a href>Rating </a></th>
       </tr>
-      <tr>
+      <tr ng-repeat="restaurant in restaurants">
         <td>
-          <a href="#/menu/angular">
-            <img class="img-rounded pull-left" src="img/restaurants/angular.jpg">
-            <b>Angular Pizza</b>
+          <a href="#/menu/{{restaurant.id}}">
+            <img class="img-rounded pull-left" ng-src="img/restaurants/{{restaurant.id}}.jpg">
+            <b>{{restaurant.name}}</b>
           </a>
-          <p>Home of the superheroic pizza! </p>
+          <p>{{restaurant.description}}</p>
         </td>
         <td>
-          <ul class="fm-rating pointer">
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li>★</li>
-            <li>★</li>
-          </ul>
+          {{restaurant.rating}}
         </td>
         <td>
-          <ul class="fm-rating">
-            <li class="fm-selected">$</li>
-            <li class="fm-selected">$</li>
-            <li>$</li>
-            <li>$</li>
-            <li>$</li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="#/menu/tofuparadise">
-            <img class="img-rounded pull-left" src="img/restaurants/tofuparadise.jpg">
-            <b>BBQ Tofu Paradise</b>
-          </a>
-          <p>Vegetarians, we have your BBQ needs covered. Our home-made tofu skewers and secret BBQ sauce will have you licking your fingers.</p>
-        </td>
-
-        <td>
-          <ul class="fm-rating pointer">
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li class="fm-selected">★</li>
-            <li>★</li>
-            <li>★</li>
-          </ul>
-        </td>
-        <td>
-          <ul class="fm-rating">
-            <li class="fm-selected">$</li>
-            <li class="fm-selected">$</li>
-            <li>$</li>
-            <li>$</li>
-            <li>$</li>
-          </ul>
+          {{restaurant.price}}
         </td>
       </tr>
     </table>
