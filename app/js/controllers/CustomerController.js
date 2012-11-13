@@ -1,9 +1,14 @@
 'use strict';
 
 foodMeApp.controller('CustomerController',
-    function CustomerController($scope) {
+    function CustomerController($scope, customer) {
+
+  $scope.customerName = customer.name;
+  $scope.customerAddress = customer.address;
+
 
   $scope.findRestaurants = function(customerName, customerAddress) {
-    alert(customerName + ' - ' + customerAddress);
+    customer.name = customerName;
+    customer.address = customerAddress;
   };
 });
