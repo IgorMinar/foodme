@@ -11,9 +11,7 @@ foodMeApp.directive('fmRating', function() {
     require: 'ngModel',
     link: function(scope, element, attrs, ngModel) {
 
-      if (!attrs.max) {
-        attrs.max = scope.max = 5;
-      }
+      attrs.max = scope.max = parseInt(scope.max || 5, 10);
 
       if (!attrs.symbol) {
         attrs.symbol = scope.symbol = '\u2605';
