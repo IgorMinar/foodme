@@ -14,7 +14,6 @@ describe('step 10', function() {
 
   it('should render 3 restaurants', function() {
     var table = repeater('.fm-restaurant-list table tr');
-    expect(table.count()).toEqual(4);
-    expect(table.column('restaurant.name')).toEqual(['Angular Pizza', 'BBQ Tofu Paradise', 'Beijing Express']);
+    expect(table.count()).toEqual(40);
   });
 });
