@@ -40,9 +40,9 @@
 
     <table class="table table-hover table-striped">
       <tr>
-        <th><a href>Name &#9650;</a></th>
-        <th><a href>Price </a></th>
-        <th><a href>Rating </a></th>
+        <th><a href ng-click="sortBy('name')">Name {{sortIconFor('name')}}</a></th>
+        <th><a href ng-click="sortBy('price')">Price {{sortIconFor('price')}}</a></th>
+        <th><a href ng-click="sortBy('rating')">Rating {{sortIconFor('rating')}}</a></th>
       </tr>
       <tr ng-repeat="restaurant in restaurants">
         <td>
