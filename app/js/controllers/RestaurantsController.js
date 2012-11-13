@@ -38,6 +38,14 @@ foodMeApp.controller('RestaurantsController',
   };
 
 
+  $scope.sortBy = function(key) {
+  };
+
+
+  $scope.sortIconFor = function(key) {
+  };
+
+
   $scope.CUISINE_OPTIONS = {
     african: 'African',
     american: 'American',
