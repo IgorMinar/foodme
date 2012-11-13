@@ -7,4 +7,4 @@ REM - NodeJS (http://nodejs.org/)
 REM - Testacular (npm install -g testacular)
 
 set BASE_DIR=%~dp0
-testacular start "%BASE_DIR%\..\config\testacular.conf.js" %*
+"%BASE_DIR%\..\node_modules\testacular\bin\testacular" start "%BASE_DIR%\..\config\testacular.conf.js" %*

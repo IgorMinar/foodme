@@ -6,4 +6,4 @@ echo ""
 echo "Starting Testacular Server (http://vojtajina.github.com/testacular)"
 echo "-------------------------------------------------------------------"
 
-testacular start $BASE_DIR/../config/testacular.conf.js $*
+$BASE_DIR/../node_modules/testacular/bin/testacular start $BASE_DIR/../config/testacular.conf.js $*
