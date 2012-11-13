@@ -28,6 +28,12 @@
 }
 
 
+.fm-right {
+  text-align: right;
+}
+
+
+
 /****************************************
  * angular components                   *
  ****************************************/
@@ -81,6 +87,15 @@ fm-rating:hover a {
   display: block;
   width: 450px;
 }
+
+
+input.ng-invalid.ng-dirty {
+  border-color: #E9322D;
+  -webkit-box-shadow: 0 0 6px #F8B9B7;
+  -moz-box-shadow: 0 0 6px #f8b9b7;
+  box-shadow: 0 0 6px #F8B9B7;
+}
+
 
 
 
@@ -197,4 +212,35 @@ fm-rating:hover a {
 .fm-cart p {
   padding-left: 20px;
   padding-top: 5px;
+}
+
+
+/* checkout */
+
+.fm-checkout table {
+  width: 960px;
+  margin-left: -10px;
+}
+
+.fm-checkout table th:nth-child(2),
+.fm-checkout table td:nth-child(2) {
+  width: 100%;
+  text-align: left;
+}
+
+.fm-checkout table td:nth-child(1) input {
+  width: 30px;
+}
+
+.fm-checkout table th,
+.fm-checkout table td {
+  text-align: right;
+}
+
+.fm-checkout table tr:last-child th {
+  text-align: right;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
 }
