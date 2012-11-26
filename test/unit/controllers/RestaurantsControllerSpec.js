@@ -90,5 +90,22 @@ describe('RestaurantsController', function() {
 
     expect(scope.restaurants.length).toBe(5);
   });
+
+
+  it('should filter by cuisine', function() {
+    expect(scope.restaurants.length).toBe(5);
+
+    scope.$apply(function() {
+      scope.filter.cuisine = ['german'];
+    });
+
+    expect(idsFrom(scope.restaurants)).toEqual(['esthers']);
+
+    scope.$apply(function() {
+      scope.filter.cuisine = ['african', 'german'];
+    });
+
+    expect(idsFrom(scope.restaurants)).toEqual(['esthers', 'khartoum']);
+  });
 });
 
