@@ -65,17 +65,14 @@ describe('foodme', function() {
     });
 
 
-    it('should render 3 restaurants', function() {
+    it('should render restaurants from server', function() {
       var table = repeater('.fm-restaurant-list table tr');
-      expect(table.count()).toEqual(4);
-      expect(table.column('restaurant.name')).toEqual([
-        'Angular Pizza', 'BBQ Tofu Paradise', 'Beijing Express'
-      ]);
+      expect(table.count()).toEqual(40);
     });
 
 
     it('should show number of restaurants', function() {
-      expect(element('.fm-restaurant-list h4').text()).toMatch('3 restaurants found');
+      expect(element('.fm-restaurant-list h4').text()).toMatch('39 restaurants found');
     });
   });
 });
