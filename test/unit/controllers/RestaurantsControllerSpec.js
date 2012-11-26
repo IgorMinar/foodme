@@ -107,5 +107,35 @@ describe('RestaurantsController', function() {
 
     expect(idsFrom(scope.restaurants)).toEqual(['esthers', 'khartoum']);
   });
+
+
+  it('should sort asc/desc', function() {
+    // first click on "name" makes it sort asc
+    scope.$apply(function() {
+      scope.sortBy('name');
+    });
+
+    expect(idsFrom(scope.restaurants)).toEqual([
+      'tofuparadise', 'esthers', 'khartoum', 'bateaurouge', 'robatayaki'
+    ]);
+
+    // first click on "rating" makes it sort asc
+    scope.$apply(function() {
+      scope.sortBy('rating');
+    });
+
+    expect(idsFrom(scope.restaurants)).toEqual([
+      'tofuparadise', 'khartoum', 'esthers', 'bateaurouge', 'robatayaki'
+    ]);
+
+    // second click on "rating" makes it sort desc
+    scope.$apply(function() {
+      scope.sortBy('rating');
+    });
+
+    expect(idsFrom(scope.restaurants)).toEqual([
+      'robatayaki', 'bateaurouge', 'esthers', 'khartoum', 'tofuparadise'
+    ]);
+  });
 });
 
