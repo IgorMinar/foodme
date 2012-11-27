@@ -30,5 +30,14 @@ describe('CustomerController', function() {
       expect(customer.name).toEqual('newName');
       expect(customer.address).toEqual('newAddress');
     });
+
+
+    it('should redirect the user to restaurant list', inject(function($location) {
+      $location.url('/customer');
+      expect($location.url()).toEqual('/customer');
+
+      scope.findRestaurants('newName', 'newAddress');
+      expect($location.url()).toEqual('/');
+    }));
   });
 });
