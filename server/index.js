@@ -1,4 +1,9 @@
 var express = require('express');
+var logger = require('morgan');
+var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
+
+
 var fs = require('fs');
 var open = require('open');
 
@@ -27,13 +32,13 @@ exports.start = function(PORT, STATIC_DIR, DATA_FILE, TEST_DIR) {
   var storage = new MemoryStorage();
 
   // log requests
-  app.use(express.logger('dev'));
+  app.use(logger('dev'));
 
   // serve static files for demo client
   app.use(express.static(STATIC_DIR));
 
   // parse body into req.body
-  app.use(express.bodyParser());
+  app.use(bodyParser());
 
 
   // API
